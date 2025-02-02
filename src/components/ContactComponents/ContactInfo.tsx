@@ -1,9 +1,12 @@
 import { Box, Flex, Text, Icon, Link, useColorModeValue } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactInfo = () => {
     const textColor = useColorModeValue("brand.600", "brand.50");
     const iconColor = useColorModeValue("brand.500", "brand.300");
+    const { t } = useTranslation();
+
 
     return (
         <Box
@@ -23,7 +26,7 @@ const ContactInfo = () => {
                 textAlign="center"
                 mb={6}
             >
-                Información de Contacto
+                {t("ContactInfo")} 
             </Text>
 
             <Flex direction="column" gap={6}>
@@ -58,7 +61,7 @@ const ContactInfo = () => {
                             color={textColor}
                             fontFamily="'Alegreya Sans SC', sans-serif"
                         >
-                            Teléfono
+                            {t("ContactPhone")} 
                         </Text>
                         <Link
                             href="tel:+1234567890"
@@ -80,7 +83,7 @@ const ContactInfo = () => {
                             color={textColor}
                             fontFamily="'Alegreya Sans SC', sans-serif"
                         >
-                            Dirección
+                            {t("ContactAddress")} 
                         </Text>
                         <Text
                             color={iconColor}

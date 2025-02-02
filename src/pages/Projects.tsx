@@ -1,12 +1,19 @@
 import { Container, SimpleGrid, Heading, Box, useColorModeValue } from "@chakra-ui/react";
 import TechnologiesSection from "../components/ProjectsComponents/Technologies";
 import ProjectCard from "../components/ProjectsComponents/ProjectCard";
+import AirportImg from "../assets/AeropuertoImg.webp";
+import ColorEaseImg from "../assets/ColorEaseImg.webp";
+import QardrobeImg from "../assets/QardrobeImg.webp";
+import PortfolioImg from "../assets/PortfolioImg.webp";
+import { useTranslation } from "react-i18next";
 
 const Projects: React.FC = () => {
+    const { t } = useTranslation();
+
     const projects = [
         {
-            title: "Web Portfolio",
-            description: "Proyecto creado para mostrar habilidades técnicas así como tenologías conocidas y proyectos en los que he trabajado.",
+            title: t("Project1Title"),
+            description: t("Project1Description"),
             technologies: [
                 { name: "TypeScript", icon: <i className="devicon-typescript-plain"></i> },
                 { name: "React", icon: <i className="devicon-react-original"></i> },
@@ -14,42 +21,42 @@ const Projects: React.FC = () => {
                 { name: "Tailwind", icon: <i className="devicon-tailwind-plain"></i> },
                 { name: "Chakra UI", icon: <i className="devicon-chakra-ui-plain"></i> },
             ],
-            imageUrl: "https://via.placeholder.com/300",
+            imageUrl: PortfolioImg,
             projectUrl: "#",
         },
         {
-            title: "Color Ease",
-            description: "Proyecto creado para ayudar a los diseñadores a encontrar combinaciones de colores para sus proyectos.",
+            title: t("Project2Title"),
+            description: t("Project2Description"),
             technologies: [
                 { name: "JavaScript", icon: <i className="devicon-javascript-plain"></i> },
                 { name: "React", icon: <i className="devicon-react-original"></i> },
                 { name: "CSS Modules", icon: <i className="devicon-css3-plain"></i> },
             ],
-            imageUrl: "https://via.placeholder.com/300",
+            imageUrl: ColorEaseImg,
             projectUrl: "https://color-ease.vercel.app/",
         },
         {
-            title: "Airport Manager",
-            description: "Proyecto creado para gestionar los vuelos de un aeropuerto en forma de CRUD conectado al backend a través de JDBC y usando JSwing para crear una interfaz gráfica en forma de aplicación de escritorio.", 
+            title: t("Project3Title"),
+            description: t("Project3Description"),
             technologies: [
                 { name: "Java", icon: <i className="devicon-java-original"></i> },
                 { name: "Swing", icon: <i className="devicon-java-plain"></i> },
                 { name: "MySQL", icon: <i className="devicon-mysql-plain"></i> },
             ],
-            imageUrl: "https://via.placeholder.com/300",
+            imageUrl: AirportImg,
             projectUrl: "https://github.com/abrahammordev/AeropuertoGUI",
         },
         {
-            title: "QaRdrobe",
-            description: "Landing page de herramienta para revolucionar la industria textil y la forma en la que se trata la  ropa  en  el  mundo.  Con  la  ayuda  de  la  tecnología  y  la  inteligencia  artificial,  QaRdrobe  busca  cambiar  la  forma  en  la  que  las  personas  compran,  venden  y  usan  ropa.",
+            title: t("Project4Title"),
+            description: t("Project4Description"),
             technologies: [
                 { name: "Framer", icon: <i className="devicon-framer-original"></i> },
                 { name: "Trello", icon: <i className="devicon-trello-plain"></i> },
             ],
-            imageUrl: "https://qardrobe.com",
+            imageUrl: QardrobeImg,
             projectUrl: "https://qardrobe.com",
         },
-       
+
     ];
 
     return (
@@ -72,16 +79,16 @@ const Projects: React.FC = () => {
                     px={{ base: 4, md: 0 }}
                 >
                     {projects.map((project, index) => (
-                       
 
-                    <ProjectCard
-                        key={index}
-                        title={project.title}
-                        description={project.description}
-                        technologies={project.technologies}
-                        imageUrl={project.imageUrl}
-                        projectUrl={project.projectUrl}
-                    />
+
+                        <ProjectCard
+                            key={index}
+                            title={project.title}
+                            description={project.description}
+                            technologies={project.technologies}
+                            imageUrl={project.imageUrl}
+                            projectUrl={project.projectUrl}
+                        />
                     ))}
                 </SimpleGrid>
             </Container>
