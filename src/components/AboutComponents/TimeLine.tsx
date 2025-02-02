@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Center, Text, useColorModeValue, Button } from "@chakra-ui/react";
 import { FaPlane, FaCode, FaSearch, FaTshirt, FaUserGraduate } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
@@ -7,13 +7,13 @@ const TimeLine: React.FC = () => {
   const { t } = useTranslation();
 
   // Colores para modo claro y oscuro basados en tu tema
-  const textColor = useColorModeValue("brand.letter", "white"); 
+  const textColor = useColorModeValue("brand.letter", "white");
   const titleColor = useColorModeValue("brand.600", "brand.100");
-  const iconBgColor = useColorModeValue("brand.100", "brand.500"); 
+  const iconBgColor = useColorModeValue("brand.100", "brand.500");
   const iconColor = useColorModeValue("brand.600", "brand.100");
-  const buttonBgColor = useColorModeValue("brand.300", "brand.400"); 
-  const dateColor = useColorModeValue("brand.400", "brand.300"); 
-  const descriptionColor = useColorModeValue("brand.500", "brand.200"); 
+  const buttonBgColor = useColorModeValue("brand.300", "brand.400");
+  const dateColor = useColorModeValue("brand.400", "brand.300");
+  const descriptionColor = useColorModeValue("brand.500", "brand.200");
 
   const timelineItems = [
     {
@@ -31,9 +31,8 @@ const TimeLine: React.FC = () => {
       button: true,
       link: "https://color-ease.vercel.app/",
     },
-    
     {
-      icon: <FaTshirt/>,
+      icon: <FaTshirt size={16} />,
       title: t('TimeLineProject3'),
       date: t('TimeLineDate3'),
       description: t('TimeLineProject3Description'),
@@ -49,22 +48,21 @@ const TimeLine: React.FC = () => {
   ];
 
   return (
-    <Center h={{ base: "150vh", md: "120vh" }}>
+    <Center h={{ base: "auto", md: "120vh" }} p={4}>
       <Box
         p={5}
         maxW="4xl"
         borderWidth="1px"
         borderRadius="xl"
         boxShadow="lg"
-        overflow={["auto", "auto", "hidden"]}
-        bg={"tramsparent"}
+        bg="transparent"
       >
-        <Text fontSize="3xl" fontWeight="bold" color={textColor}>
-          <ol className="relative border-s border-gray-200 dark:border-gray-700 max-w-4xl mx-auto">
+        <Text fontSize="3xl" fontWeight="bold" color={textColor} mb={8}>
+          <ol className="relative border-s border-gray-200 dark:border-gray-700">
             {timelineItems.map((item, index) => (
               <li key={index} className="mb-10 ml-8 flex items-center">
                 <span
-                  className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8"
+                  className="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ml-3"
                   style={{
                     backgroundColor: iconBgColor,
                     color: iconColor,
@@ -73,7 +71,10 @@ const TimeLine: React.FC = () => {
                   {item.icon}
                 </span>
                 <div className="ml-10">
-                  <h3 className="flex items-center mb-1 text-lg font-semibold" style={{ color: titleColor }}>
+                  <h3
+                    className="flex items-center mb-1 text-lg font-semibold"
+                    style={{ color: titleColor }}
+                  >
                     {item.title}
                     {item.button && (
                       <span
@@ -87,27 +88,27 @@ const TimeLine: React.FC = () => {
                       </span>
                     )}
                   </h3>
-                  <time className="block mb-2 text-sm font-normal leading-none" style={{ color: dateColor }}>
+                  <time className="block mb-2 text-sm font-normal" style={{ color: dateColor }}>
                     {item.date}
                   </time>
                   <p className="mb-4 text-base font-normal" style={{ color: descriptionColor }}>
                     {item.description}
                   </p>
                   {item.button && (
-                    <a
+                    <Button
+                      as="a"
                       href={item.link}
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg focus:z-10 focus:ring-4 focus:outline-none"
-                      style={{
-                        backgroundColor: iconBgColor,
-                        color: iconColor,
-                        borderColor: buttonBgColor,
-                      }}
                       target="_blank"
                       rel="noopener noreferrer"
+                      colorScheme="brand"
+                      size="sm"
+                      leftIcon={<FaSearch />}
+                      bg={iconBgColor}
+                      color={iconColor}
+                      _hover={{ bg: buttonBgColor }}
                     >
-                      <FaSearch className="mr-2" />{" "}
                       {t("TimeLineProjectButton")}
-                    </a>
+                    </Button>
                   )}
                 </div>
               </li>

@@ -13,7 +13,11 @@ const Navbar: React.FC = () => {
       boxShadow="md"
       p={3}
       bg="#364150"
-      bgGradient={colorMode === "light" ? "linear(to-r, brand.50, brand.300)" : "linear(to-r, brand.500, brand.600)"}
+      bgGradient={
+        colorMode === "light"
+          ? "linear(to-r, brand.50, brand.300)"
+          : "linear(to-r, brand.500, brand.600)"
+      }
       borderRadius={45}
       width="fit-content"
       maxWidth="1200px"
@@ -29,43 +33,48 @@ const Navbar: React.FC = () => {
       <Flex
         alignItems="center"
         justifyContent="space-between"
-        flexDirection={["column", "row"]}
-        px={6}
+        flexDirection={["column", "row"]} 
+        px={[2, 6]}
+        gap={[4, 8]} 
       >
-        <Flex as="nav" gap={8} alignItems="center" flexDirection={["column", "row"]}>
-          <NavLink
-            to={RoutePaths.Home}>
-
-            <FaHome size={35} />
+        <Flex
+          as="nav"
+          gap={[4, 8]} 
+          alignItems="center"
+          flexDirection={["row", "row"]} 
+        >
+          <NavLink to={RoutePaths.Home}>
+            <FaHome size={25} /> 
           </NavLink>
 
-          <NavLink
-            to={RoutePaths.About}>
-            <FaUser size={35} />
+          <NavLink to={RoutePaths.About}>
+            <FaUser size={25} />
           </NavLink>
 
-          <NavLink
-            to={RoutePaths.Projects}>
-            <FaCode size={35} />
+          <NavLink to={RoutePaths.Projects}>
+            <FaCode size={25} />
           </NavLink>
 
-          <NavLink
-            to={RoutePaths.Contact}>
-            <FaEnvelope size={35} />
+          <NavLink to={RoutePaths.Contact}>
+            <FaEnvelope size={25} />
           </NavLink>
         </Flex>
 
-        <Box display="flex" gap={4} alignItems="center" flexDirection={["column", "row"]}>
+        <Flex
+          gap={[2, 4]} 
+          alignItems="center"
+          flexDirection={["row", "row"]} 
+        >
           <LanguageSwitch />
           <Button
             onClick={toggleColorMode}
             bg="transparent"
             color="brand.100"
-            size={["md", "lg"]}
+            size={["sm", "md"]} 
           >
             {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
           </Button>
-        </Box>
+        </Flex>
       </Flex>
     </Box>
   );
