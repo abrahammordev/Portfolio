@@ -3,7 +3,7 @@ import TechnologiesSection from "../components/ProjectsComponents/Technologies";
 import ProjectCard from "../components/ProjectsComponents/ProjectCard";
 import AirportImg from "../assets/AeropuertoImg.webp";
 import ColorEaseImg from "../assets/ColorEaseImg.webp";
-import QaRdrobeImg from "../assets/QardrobeImg.webp";
+import QaRdrobeImg from "../assets/QaRdrobeImg.webp";
 import PortfolioImg from "../assets/PortfolioImg.webp";
 import { useTranslation } from "react-i18next";
 
