@@ -1,51 +1,31 @@
-# React + TypeScript + Vite
+# Portafolio de Abraham Morales
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido/a a mi portafolio personal! Este proyecto es una muestra de mi trabajo como desarrollador Full Stack, donde podrás encontrar información sobre mí, mis habilidades, proyectos destacados y cómo contactarme.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Puedes ver una demo en vivo del proyecto aquí: [Enlace al despliegue](https://tu-portafolio.com)
 
-## Expanding the ESLint configuration
+## ✨ Características
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Diseño moderno y responsivo**: Adaptado para dispositivos móviles y de escritorio.
+- **Secciones informativas**:
+  - **Inicio**: Introducción llamativa y botón para descargar mi CV.
+  - **Información académica**: Detalles sobre mi formación y cursos relevantes.
+  - **Contacto**: Formulario funcional para enviar mensajes directamente a mi correo.
+- **Modo claro y oscuro**: Soporte para ambos modos de visualización.
+- **Internacionalización**: Soporte para múltiples idiomas (inglés y español).
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Tecnologías utilizadas
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Frontend**:
+  - [React](https://reactjs.org/) - Biblioteca de JavaScript para construir interfaces de usuario.
+  - [Chakra UI](https://chakra-ui.com/) - Librería de componentes para React con enfoque en accesibilidad y diseño modular.
+  - [React Icons](https://react-icons.github.io/react-icons/) - Íconos populares para React.
+  - [EmailJS](https://www.emailjs.com/) - Servicio para enviar correos electrónicos directamente desde el frontend.
+- **Herramientas**:
+  - [Vite](https://vitejs.dev/) - Entorno de desarrollo rápido para aplicaciones modernas.
+  - [TypeScript](https://www.typescriptlang.org/) - Superset de JavaScript para tipado estático.
+  - [React i18next](https://react.i18next.com/) - Internacionalización (i18n) para aplicaciones React.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
 # -Portfolio
