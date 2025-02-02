@@ -1,6 +1,6 @@
 import { Box, Flex, Text, Icon, Link, useColorModeValue } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
 
 const ContactInfo = () => {
     const textColor = useColorModeValue("brand.600", "brand.50");
@@ -26,7 +26,7 @@ const ContactInfo = () => {
                 textAlign="center"
                 mb={6}
             >
-                {t("ContactInfo")} 
+                {t("ContactInfo")}
             </Text>
 
             <Flex direction="column" gap={6}>
@@ -61,7 +61,7 @@ const ContactInfo = () => {
                             color={textColor}
                             fontFamily="'Alegreya Sans SC', sans-serif"
                         >
-                            {t("ContactPhone")} 
+                            {t("ContactPhone")}
                         </Text>
                         <Link
                             href="tel:+1234567890"
@@ -83,7 +83,7 @@ const ContactInfo = () => {
                             color={textColor}
                             fontFamily="'Alegreya Sans SC', sans-serif"
                         >
-                            {t("ContactAddress")} 
+                            {t("ContactAddress")}
                         </Text>
                         <Text
                             color={iconColor}
@@ -93,6 +93,22 @@ const ContactInfo = () => {
                         </Text>
                     </Box>
                 </Flex>
+                <Flex align="center" gap={4}>
+                    <Icon as={FaLinkedin} color={iconColor} boxSize={6} />
+                    <Box>
+                        <Text
+                            fontSize="lg"
+                            fontWeight="semibold"
+                            color={textColor}
+                            fontFamily="'Alegreya Sans SC', sans-serif"
+                        >
+                            <Link href="https://www.linkedin.com/in/abrahammordev" target="_blank" rel="noopener noreferrer" color={iconColor} _hover={{ color: "brand.300", textDecoration: "underline" }}>
+                                Abraham
+                            </Link>
+                        </Text>
+                    </Box>
+                </Flex>
+
             </Flex>
         </Box>
     );
