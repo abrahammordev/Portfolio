@@ -3,7 +3,7 @@ import TechnologiesSection from "../components/ProjectsComponents/Technologies";
 import ProjectCard from "../components/ProjectsComponents/ProjectCard";
 import AirportImg from "../assets/AeropuertoImg.webp";
 import ColorEaseImg from "../assets/ColorEaseImg.webp";
-import QardrobeImg from "../assets/QardrobeImg.webp";
+import QaRdrobeImg from "../assets/QardrobeImg.webp";
 import PortfolioImg from "../assets/PortfolioImg.webp";
 import { useTranslation } from "react-i18next";
 
@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
                 { name: "Framer", icon: <i className="devicon-framer-original"></i> },
                 { name: "Trello", icon: <i className="devicon-trello-plain"></i> },
             ],
-            imageUrl: QardrobeImg,
+            imageUrl: QaRdrobeImg,
             projectUrl: "https://qardrobe.com",
         },
 
