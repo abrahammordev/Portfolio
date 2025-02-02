@@ -6,8 +6,6 @@ const Contact: React.FC = () => {
 
   return (
     <Container maxW="container.xl" py={16}>
-      
-
       <SimpleGrid columns={{ base: 1, md: 1 }} spacing={10}>
         <Box>
           <ContactInfo />
