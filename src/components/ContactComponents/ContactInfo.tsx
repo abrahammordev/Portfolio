@@ -39,7 +39,7 @@ const ContactInfo = () => {
                             color={textColor}
                             fontFamily="'Alegreya Sans SC', sans-serif"
                         >
-                            Email
+                            {t('ContactMail')}
                         </Text>
                         <Link
                             href="mailto:abrahammordev@gmail.com"
