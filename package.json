@@ -15,6 +15,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@tailwindcss/vite": "^4.0.0",
+    "@vercel/analytics": "^1.4.1",
     "ci": "^2.3.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^10.18.0",
