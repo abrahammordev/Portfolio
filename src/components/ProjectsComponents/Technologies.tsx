@@ -1,4 +1,5 @@
 import { Heading, Box, useColorModeValue, Flex, VStack, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import {
     FaJava,
     FaPython,
