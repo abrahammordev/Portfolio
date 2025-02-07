@@ -36,7 +36,7 @@ Puedes ver mi proyecto desplegado aquí: [Enlace al despliegue](https://abrahamm
 
 ### **Funcionalidades adicionales**
 
-- [EmailJS](https://www.emailjs.com/) - Servicio para enviar correos electrónicos directamente desde el frontend.
+- [EmailJS](https://www.emailjs.com/) - Serfvicio para enviar correos electrónicos directamente desde el frontend.
 - [React i18next](https://react.i18next.com/) - Internacionalización (i18n) para aplicaciones React.
 
 ## 📥 Instalación y uso
