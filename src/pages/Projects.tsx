@@ -70,12 +70,12 @@ const Projects: React.FC = () => {
                     fontSize="4xl"
                     color={useColorModeValue("gray.600", "gray.300")}
                 >
-                    Proyectos Destacados
+                    {t("ProjectHeader")}
                 </Heading>
 
                 <SimpleGrid
-                    columns={{ base: 1, md: 2, lg: 3 }}
-                    spacing={10}
+                    columns={{ base: 1, md: 2, lg: 2 }}
+                    spacing={5}
                     px={{ base: 4, md: 0 }}
                 >
                     {projects.map((project, index) => (

@@ -44,6 +44,8 @@ const HeroSection = () => {
                     height: "70%",
                     objectFit: "cover",
                     zIndex: -1,
+                    borderBottomLeftRadius: "60px",
+                    borderBottomRightRadius: "60px",
                 }}
             >
                 <source src={bgVideo} type="video/mp4" />
@@ -55,8 +57,20 @@ const HeroSection = () => {
             >
                 <Heading
                     as="h1"
-                    fontSize={{ base: "3xl", md: "3xl" }}
+                    fontSize={{ base: "3xl", md: "5xl" }}
                     fontWeight="bold"
+                    color={"white"}
+                    fontFamily="'Alegreya Sans SC', sans-serif"
+                    ml={{ base: 0, md: 20 }}
+
+                    mb={6}
+                >
+                    {t("HeroName")}
+                </Heading>
+                <Heading
+                    as="h1"
+                    fontSize={{ base: "3xl", md: "3xl" }}
+                    fontWeight="semi-bold"
                     color={"brand.50"}
                     fontFamily="'Alegreya Sans SC', sans-serif"
                     ml={{ base: 0, md: 20 }}
@@ -82,7 +96,7 @@ const HeroSection = () => {
                     ml={{ base: 0, md: 20 }}
 
                 >
-                    {t("HeroTitle")}
+                    {t("HeroSlogan")}
                 </Text>
             </motion.div>
 

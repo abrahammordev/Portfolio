@@ -1,5 +1,6 @@
 import { Box, Image, Text, VStack, HStack, Tag, Button, Link, useColorModeValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
     title: string;
@@ -12,6 +13,8 @@ interface ProjectCardProps {
 const MotionBox = motion(Box);
 
 const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl }: ProjectCardProps) => {
+    const { t } = useTranslation();
+
     return (
         <MotionBox
             borderWidth="1px"
@@ -81,7 +84,7 @@ const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl }:
                                 transform: "scale(1.05)",
                             }}
                         >
-                            Ver Proyecto
+                            {t('ProjectButton')}
                         </Button>
                     </Link>
                 )}
