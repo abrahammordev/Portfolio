@@ -1,3 +1,4 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import RoutePaths from "../../routes/RoutePaths";
 import { Button, useColorMode, Box, Flex } from "@chakra-ui/react";
@@ -7,17 +8,30 @@ import { FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight / 3) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   return (
     <Box
-      boxShadow="md"
+      boxShadow="0 0 80px #1014196b"
       p={3}
-      bg="#364150"
-      bgGradient={
-        colorMode === "light"
-          ? "linear(to-r, brand.50, brand.300)"
-          : "linear(to-r, brand.500, brand.600)"
-      }
+      transform={isScrolled ? "scale(0.9)" : "scale(1)"}
+      transition="transform 0.3s ease-in-out"
+      backdropFilter="blur(15px)"
+      bg="#36415099"
       borderRadius={45}
       width="fit-content"
       maxWidth="1200px"
@@ -33,18 +47,25 @@ const Navbar: React.FC = () => {
       <Flex
         alignItems="center"
         justifyContent="space-between"
-        flexDirection={["column", "row"]} 
+        flexDirection={["row", "row"]}
         px={[2, 6]}
-        gap={[4, 8]} 
+        gap={[4, 8]}
       >
         <Flex
           as="nav"
-          gap={[4, 8]} 
+          gap={[2, 4]}
           alignItems="center"
-          flexDirection={["row", "row"]} 
+          flexDirection={["row", "row"]}
         >
-          <NavLink to={RoutePaths.Home}>
-            <FaHome size={25} /> 
+          <NavLink
+            to={RoutePaths.Home}
+            className={({ isActive }) =>
+              `transition-colors duration-300 ${
+                isActive ? "text-brand-300" : "text-inherit"
+              } hover:text-brand-200`
+            }
+          >
+            <FaHome size={25} />
           </NavLink>
 
           <NavLink to={RoutePaths.About}>
@@ -60,17 +81,13 @@ const Navbar: React.FC = () => {
           </NavLink>
         </Flex>
 
-        <Flex
-          gap={[2, 4]} 
-          alignItems="center"
-          flexDirection={["row", "row"]} 
-        >
+        <Flex gap={[1, 2]} alignItems="center" flexDirection={["row", "row"]}>
           <LanguageSwitch />
           <Button
             onClick={toggleColorMode}
             bg="transparent"
             color="brand.100"
-            size={["sm", "md"]} 
+            size={["sm", "md"]}
           >
             {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
           </Button>

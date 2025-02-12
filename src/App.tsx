@@ -11,7 +11,9 @@ function App() {
       <Analytics />
       <Navbar />
       <SocialLinks />
-      <AppRoutes />
+      <div style={{ paddingTop: '60px' }}>
+        <AppRoutes />
+      </div>
     </Router >
 
 

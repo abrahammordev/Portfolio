@@ -7,8 +7,6 @@ const About: React.FC = () => {
       <IntroSection />
       <TimeLine />
     </div>
-
-
   );
 };
 
