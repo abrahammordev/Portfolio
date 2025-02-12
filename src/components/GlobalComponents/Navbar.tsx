@@ -23,7 +23,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
     <Box
       boxShadow="0 0 80px #1014196b"
@@ -31,7 +30,7 @@ const Navbar: React.FC = () => {
       transform={isScrolled ? "scale(0.9)" : "scale(1)"}
       transition="transform 0.3s ease-in-out"
       backdropFilter="blur(15px)"
-      bg="#36415099"
+      bg={colorMode === "light" ? "#ffffff99" : "#36415099"}
       borderRadius={45}
       width="fit-content"
       maxWidth="1200px"
@@ -65,19 +64,19 @@ const Navbar: React.FC = () => {
               } hover:text-brand-200`
             }
           >
-            <FaHome size={25} />
+            <FaHome size={25} color={colorMode === "light" ? "#000" : "#fff"} />
           </NavLink>
 
           <NavLink to={RoutePaths.About}>
-            <FaUser size={25} />
+            <FaUser size={25} color={colorMode === "light" ? "#000" : "#fff"} />
           </NavLink>
 
           <NavLink to={RoutePaths.Projects}>
-            <FaCode size={25} />
+            <FaCode size={25} color={colorMode === "light" ? "#000" : "#fff"} />
           </NavLink>
 
           <NavLink to={RoutePaths.Contact}>
-            <FaEnvelope size={25} />
+            <FaEnvelope size={25} color={colorMode === "light" ? "#000" : "#fff"} />
           </NavLink>
         </Flex>
 
