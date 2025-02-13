@@ -59,23 +59,44 @@ const Navbar: React.FC = () => {
           <NavLink
             to={RoutePaths.Home}
             className={({ isActive }) =>
-              `transition-colors duration-300 ${
-                isActive ? "text-brand-300" : "text-inherit"
-              } hover:text-brand-200`
+              `transition-transform duration-300 ${
+                isActive ? "text-brand-300 scale-150" : "text-inherit"
+              } hover:text-brand-200 hover:scale-140`
             }
           >
             <FaHome size={25} color={colorMode === "light" ? "#000" : "#fff"} />
           </NavLink>
 
-          <NavLink to={RoutePaths.About}>
+          <NavLink
+            to={RoutePaths.About}
+            className={({ isActive }) =>
+              `transition-transform duration-300 ${
+                isActive ? "text-brand-300 scale-150" : "text-inherit"
+              } hover:text-brand-200 hover:scale-140`
+            }
+          >
             <FaUser size={25} color={colorMode === "light" ? "#000" : "#fff"} />
           </NavLink>
 
-          <NavLink to={RoutePaths.Projects}>
+          <NavLink
+            to={RoutePaths.Projects}
+            className={({ isActive }) =>
+              `transition-transform duration-300 ${
+                isActive ? "text-brand-300 scale-150" : "text-inherit"
+              } hover:text-brand-200 hover:scale-140`
+            }
+          >
             <FaCode size={25} color={colorMode === "light" ? "#000" : "#fff"} />
           </NavLink>
 
-          <NavLink to={RoutePaths.Contact}>
+          <NavLink
+            to={RoutePaths.Contact}
+            className={({ isActive }) =>
+              `transition-transform duration-300 ${
+                isActive ? "text-brand-300 scale-150" : "text-inherit"
+              } hover:text-brand-200 hover:scale-140`
+            }
+          >
             <FaEnvelope size={25} color={colorMode === "light" ? "#000" : "#fff"} />
           </NavLink>
         </Flex>
@@ -85,10 +106,10 @@ const Navbar: React.FC = () => {
           <Button
             onClick={toggleColorMode}
             bg="transparent"
-            color="brand.100"
+            color={colorMode === "dark" ? "white" : "brand.100"}
             size={["sm", "md"]}
           >
-            {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+            {colorMode === "dark" ? <SunIcon color="white" /> : <MoonIcon color="black" />}
           </Button>
         </Flex>
       </Flex>

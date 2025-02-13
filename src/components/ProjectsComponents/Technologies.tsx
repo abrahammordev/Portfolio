@@ -74,7 +74,7 @@ const TechnologiesSection = () => {
 
             <Flex
                 direction={{ base: "column", md: "row" }}
-                justify="center"
+                justify={{ base: "center", md: "space-between" }}
                 gap={8}
                 maxW="1200px"
                 mx="auto"
