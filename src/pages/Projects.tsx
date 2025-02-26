@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
     ];
 
     return (
-        <Box>
+        <Box pb={{ base: "100px", md: "40px" }}>
             <TechnologiesSection />
             <Container maxW="container.xl" py={16}>
                 <Heading

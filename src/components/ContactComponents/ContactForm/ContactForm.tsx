@@ -67,7 +67,7 @@ const ContactForm: React.FC = () => {
     const hoverBg = useColorModeValue("gray.50", "gray.800");
 
     return (
-        <Box p={6} borderRadius="2xl" maxW={{ base: "100%", sm: "500px" }} mx="auto" bg={bgColor} boxShadow="xl" mt={8} pb="80px">
+        <Box p={6} borderRadius="2xl" maxW={{ base: "100%", sm: "500px" }} mx="auto" bg={bgColor} boxShadow="xl">
             <Box textAlign="center" mb={6}>
                 <Heading as="h1" fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" color={textColor}>
                     {t('ContactHeader')}

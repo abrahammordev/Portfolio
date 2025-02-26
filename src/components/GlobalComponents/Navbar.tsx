@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import RoutePaths from "../../routes/RoutePaths";
-import { Button, useColorMode, Box, Flex } from "@chakra-ui/react";
+import { Button, useColorMode, Box, Flex, IconButton } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { FaGithub, FaLinkedin, FaGoogle } from "react-icons/fa";
 import LanguageSwitch from "./LanguageSwitch";
 import { FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa";
 
@@ -43,6 +44,65 @@ const Navbar: React.FC = () => {
       right={0}
       zIndex={1}
     >
+      <Flex display={{ base: "flex", md: "none" }} flexDirection="row" alignItems="center" justifyContent="center" gap={4}>
+        <IconButton
+          as="a"
+          href="https://github.com/abrahammordev"
+          target="_blank"
+          aria-label="GitHub"
+          icon={<FaGithub />}
+          boxSize={["44px", "50px", "60px"]}
+          color={colorMode === "light" ? "#000" : "#fff"}
+          _hover={{
+            color: colorMode === "light" ? "#000" : "#fff",
+            transform: "scale(1.3)",
+            transition: "all 0.3s ease",
+          }}
+          isRound
+          _active={{
+            opacity: 1,
+          }}
+          bg="transparent"
+        />
+        <IconButton
+          as="a"
+          href="https://www.linkedin.com/in/abrahammordev"
+          target="_blank"
+          aria-label="LinkedIn"
+          icon={<FaLinkedin />}
+          boxSize={["40px", "50px", "60px"]}
+          color={colorMode === "light" ? "#000" : "#fff"}
+          _hover={{
+            color: colorMode === "light" ? "#000" : "#fff",
+            transform: "scale(1.3)",
+            transition: "all 0.3s ease",
+          }}
+          isRound
+          _active={{
+            opacity: 1,
+          }}
+          bg="transparent"
+        />
+        <IconButton
+          as="a"
+          href="mailto:tu-abrahammordev@gmail.com"
+          target="_blank"
+          aria-label="Gmail"
+          icon={<FaGoogle />}
+          boxSize={["40px", "50px", "60px"]}
+          color={colorMode === "light" ? "#000" : "#fff"}
+          _hover={{
+            color: colorMode === "light" ? "#000" : "#fff",
+            transform: "scale(1.3)",
+            transition: "all 0.3s ease",
+          }}
+          isRound
+          _active={{
+            opacity: 1,
+          }}
+          bg="transparent"
+        />
+      </Flex>
       <Flex
         alignItems="center"
         justifyContent="space-between"

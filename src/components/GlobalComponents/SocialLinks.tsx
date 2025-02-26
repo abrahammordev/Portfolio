@@ -9,13 +9,14 @@ const SocialLinks: React.FC = () => {
 
   return (
     <Box
-      display="flex"
-      flexDirection="column"
+      display={{ base: "none", md: "flex" }}
+      flexDirection={{ base: "row", md: "column" }}
       gap={4}
-      position="fixed"
-      left={["5%", "2%", "2%"]}
-      top="50%"
-      transform="translateY(-50%)"
+      position={{ base: "fixed", md: "fixed" }}
+      left={{ base: "50%", md: "2%" }}
+      bottom={{ base: "0", md: "auto" }}
+      top={{ base: "auto", md: "50%" }}
+      transform={{ base: "translateX(-50%)", md: "translateY(-50%)" }}
       zIndex={3}
       alignItems="center"
     >

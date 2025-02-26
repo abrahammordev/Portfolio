@@ -16,7 +16,6 @@ const ContactInfo = () => {
             p={8}
             maxW="500px"
             mx="auto"
-            mb={8}
         >
             <Text
                 fontSize="2xl"

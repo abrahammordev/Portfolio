@@ -4,7 +4,7 @@ import AcademicInfo from "../components/HomeComponents/AcademicInfo";
 
 const Home = () => {
     return (
-        <Box>
+        <Box pb={{ base: "100px", md: "40px" }}>
             <HeroSection />
             <AcademicInfo />
         </Box>

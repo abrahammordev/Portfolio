@@ -63,7 +63,7 @@ const TimeLine: React.FC = () => {
         borderRadius="xl"
         boxShadow="0 0 40pxrgba(63, 79, 99, 0.42)"
         backdropFilter="blur(15px)"
-        bg={colorMode === "light" ? "#ffffff99" : "#36415099"}
+        bg={colorMode === "light" ? "linear-gradient(135deg, #f0f4f8, #d9e2ec)" : "linear-gradient(135deg, #2d3748, #1a202c)"}
       >
         <Text fontSize="3xl" fontWeight="bold" color={textColor} mb={8}>
           <ol className="relative border-s border-gray-200 dark:border-gray-700">

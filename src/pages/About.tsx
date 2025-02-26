@@ -3,7 +3,7 @@ import TimeLine from "../components/AboutComponents/TimeLine";
 
 const About: React.FC = () => {
   return (
-    <div>
+    <div style={{ paddingBottom: "120px" }}>
       <IntroSection />
       <TimeLine />
     </div>

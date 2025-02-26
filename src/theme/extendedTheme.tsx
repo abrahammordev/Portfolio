@@ -7,10 +7,10 @@ const theme = extendTheme({
       body: {
         backgroundColor: mode("#ffffff", "#111827")(props), 
         backgroundImage: mode(
-          `radial-gradient(circle at 10% 10%, rgba(191,215,255,0.4) 0%, rgba(229,253,255,0.1) 50%),
-           radial-gradient(circle at 90% 90%, rgba(59,130,246,0.3) 0%, rgba(191,215,255,0.1) 50%)`,
-          `radial-gradient(circle at 10% 10%, rgba(2,15,46,0.4) 0%, rgba(11,60,73,0.2) 50%),
-           radial-gradient(circle at 90% 90%, rgba(2,15,46,0.4) 0%, rgba(11,60,73,0.2) 50%)`
+          `radial-gradient(circle at 15% 25%, rgba(191,215,255,0.9) 15%, rgba(229,253,255,0.3) 45%, rgba(255,255,255,0) 85%),
+           radial-gradient(circle at 85% 75%, rgba(59,130,246,0.6) 10%, rgba(191,215,255,0.3) 50%, rgba(255,255,255,0) 90%)`,
+          `radial-gradient(circle at 15% 25%, rgba(2,15,46,0.7) 10%, rgba(11,60,73,0.4) 50%, rgba(17,24,39,0) 90%),
+           radial-gradient(circle at 85% 75%, rgba(11,60,73,0.8) 10%, rgba(2,15,46,0.4) 50%, rgba(17,24,39,0) 90%)`
         )(props),
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
