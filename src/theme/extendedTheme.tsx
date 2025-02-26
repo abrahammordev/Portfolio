@@ -6,10 +6,27 @@ const theme = extendTheme({
     global: (props: any) => ({
       body: {
         backgroundColor: mode("#ffffff", "#111827")(props), 
-        backgroundImage: 'url("https://www.transparenttextures.com/patterns/climpek.png")',
-        backgroundRepeat: "repeat",
-        backgroundSize: "auto",
+        backgroundImage: mode(
+          `radial-gradient(circle at 10% 10%, rgba(191,215,255,0.4) 0%, rgba(229,253,255,0.1) 50%),
+           radial-gradient(circle at 90% 90%, rgba(59,130,246,0.3) 0%, rgba(191,215,255,0.1) 50%)`,
+          `radial-gradient(circle at 10% 10%, rgba(2,15,46,0.4) 0%, rgba(11,60,73,0.2) 50%),
+           radial-gradient(circle at 90% 90%, rgba(2,15,46,0.4) 0%, rgba(11,60,73,0.2) 50%)`
+        )(props),
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundAttachment: 'fixed',
+        minHeight: "100vh", 
         color: mode("brand.letter", "#ffffff")(props), 
+        _before: {
+          content: "''",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backdropFilter: "blur(10px)",
+          zIndex : -1,
+        }
       },
     }),
   },
