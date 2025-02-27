@@ -30,8 +30,9 @@ const Navbar: React.FC = () => {
       p={3}
       transform={isScrolled ? "scale(0.9)" : "scale(1)"}
       transition="transform 0.3s ease-in-out"
-      backdropFilter="blur(15px)"
-      bg={colorMode === "light" ? "#ffffff99" : "#36415099"}
+      backdropFilter="blur(25px)"
+      bg={colorMode === "light" ? "rgba(255, 255, 255, 0.55)" : "rgba(54, 65, 80, 0.6)"}
+
       borderRadius={45}
       width="fit-content"
       maxWidth="1200px"
