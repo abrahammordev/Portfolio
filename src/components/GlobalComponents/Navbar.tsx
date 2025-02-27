@@ -43,6 +43,7 @@ const Navbar: React.FC = () => {
       left={0}
       right={0}
       zIndex={1}
+      gap={4}
     >
       <Flex display={{ base: "flex", md: "none" }} flexDirection="row" alignItems="center" justifyContent="center" gap={4}>
         <IconButton
@@ -51,13 +52,7 @@ const Navbar: React.FC = () => {
           target="_blank"
           aria-label="GitHub"
           icon={<FaGithub />}
-          boxSize={["44px", "50px", "60px"]}
           color={colorMode === "light" ? "#000" : "#fff"}
-          _hover={{
-            color: colorMode === "light" ? "#000" : "#fff",
-            transform: "scale(1.3)",
-            transition: "all 0.3s ease",
-          }}
           isRound
           _active={{
             opacity: 1,
@@ -70,13 +65,7 @@ const Navbar: React.FC = () => {
           target="_blank"
           aria-label="LinkedIn"
           icon={<FaLinkedin />}
-          boxSize={["40px", "50px", "60px"]}
           color={colorMode === "light" ? "#000" : "#fff"}
-          _hover={{
-            color: colorMode === "light" ? "#000" : "#fff",
-            transform: "scale(1.3)",
-            transition: "all 0.3s ease",
-          }}
           isRound
           _active={{
             opacity: 1,
@@ -89,13 +78,7 @@ const Navbar: React.FC = () => {
           target="_blank"
           aria-label="Gmail"
           icon={<FaGoogle />}
-          boxSize={["40px", "50px", "60px"]}
           color={colorMode === "light" ? "#000" : "#fff"}
-          _hover={{
-            color: colorMode === "light" ? "#000" : "#fff",
-            transform: "scale(1.3)",
-            transition: "all 0.3s ease",
-          }}
           isRound
           _active={{
             opacity: 1,
@@ -119,8 +102,7 @@ const Navbar: React.FC = () => {
           <NavLink
             to={RoutePaths.Home}
             className={({ isActive }) =>
-              `transition-transform duration-300 ${
-                isActive ? "text-brand-300 scale-150" : "text-inherit"
+              `transition-transform duration-300 ${isActive ? "text-brand-300 scale-150" : "text-inherit"
               } hover:text-brand-200 hover:scale-140`
             }
           >
@@ -130,8 +112,7 @@ const Navbar: React.FC = () => {
           <NavLink
             to={RoutePaths.About}
             className={({ isActive }) =>
-              `transition-transform duration-300 ${
-                isActive ? "text-brand-300 scale-150" : "text-inherit"
+              `transition-transform duration-300 ${isActive ? "text-brand-300 scale-150" : "text-inherit"
               } hover:text-brand-200 hover:scale-140`
             }
           >
@@ -141,8 +122,7 @@ const Navbar: React.FC = () => {
           <NavLink
             to={RoutePaths.Projects}
             className={({ isActive }) =>
-              `transition-transform duration-300 ${
-                isActive ? "text-brand-300 scale-150" : "text-inherit"
+              `transition-transform duration-300 ${isActive ? "text-brand-300 scale-150" : "text-inherit"
               } hover:text-brand-200 hover:scale-140`
             }
           >
@@ -152,8 +132,7 @@ const Navbar: React.FC = () => {
           <NavLink
             to={RoutePaths.Contact}
             className={({ isActive }) =>
-              `transition-transform duration-300 ${
-                isActive ? "text-brand-300 scale-150" : "text-inherit"
+              `transition-transform duration-300 ${isActive ? "text-brand-300 scale-150" : "text-inherit"
               } hover:text-brand-200 hover:scale-140`
             }
           >

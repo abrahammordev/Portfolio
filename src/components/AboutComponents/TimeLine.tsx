@@ -66,10 +66,10 @@ const TimeLine: React.FC = () => {
         bg={colorMode === "light" ? "linear-gradient(135deg, #f0f4f8, #d9e2ec)" : "linear-gradient(135deg, #2d3748, #1a202c)"}
       >
         <Text fontSize="3xl" fontWeight="bold" color={textColor} mb={8}>
-          <ol className="relative border-s border-gray-200 dark:border-gray-700">
+          <span className="relative border-s border-gray-200 dark:border-gray-700">
             {timelineItems.map((item, index) => (
               <li key={index} className="mb-10 flex items-center">
-                <div className="flex items-center justify-center ml-4">
+                <span className="flex items-center justify-center ml-4">
                   <span
                     className="absolute flex items-center justify-center w-6 h-6 rounded-full  ring-8 ml-3"
                     style={{
@@ -79,10 +79,10 @@ const TimeLine: React.FC = () => {
                   >
                     {item.icon}
                   </span>
-                </div>
+                </span>
 
-                <div className="ml-10">
-                  <h3
+                <span className="ml-10">
+                  <span
                     className="flex items-center mb-1 text-lg font-semibold"
                     style={{ color: titleColor }}
                   >
@@ -98,19 +98,19 @@ const TimeLine: React.FC = () => {
                         Latest
                       </span>
                     )}
-                  </h3>
+                  </span>
                   <time
                     className="block mb-2 text-sm font-normal"
                     style={{ color: dateColor }}
                   >
                     {item.date}
                   </time>
-                  <p
+                  <span
                     className="mb-4 text-base font-normal"
                     style={{ color: descriptionColor }}
                   >
                     {item.description}
-                  </p>
+                  </span>
                   {item.button && (
                     <Button
                       as="a"
@@ -127,10 +127,10 @@ const TimeLine: React.FC = () => {
                       {t("TimeLineProjectButton")}
                     </Button>
                   )}
-                </div>
+                </span>
               </li>
             ))}
-          </ol>
+          </span>
         </Text>
       </Box>
     </Center>
