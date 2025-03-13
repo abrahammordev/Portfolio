@@ -1,4 +1,4 @@
-import { Heading, Box, useColorModeValue, Flex, VStack, Text } from "@chakra-ui/react";
+import { Heading, Box, useColorModeValue, Flex, Text, Stack } from "@chakra-ui/react";
 import {
     FaJava,
     FaPython,
@@ -11,7 +11,7 @@ import {
     FaCss3Alt,
     FaAws
 } from "react-icons/fa";
-import { SiDjango, SiReact, SiMysql, SiTailwindcss, SiScrumalliance } from "react-icons/si";
+import { SiDjango, SiReact, SiMysql, SiTailwindcss, SiScrumalliance, SiTypescript, SiChakraui, SiFirebase } from "react-icons/si";
 
 const TechnologiesSection = () => {
     const technologyGroups = [
@@ -20,7 +20,8 @@ const TechnologiesSection = () => {
             items: [
                 { icon: <FaJava size="2.5rem" /> },
                 { icon: <FaPython size="2.5rem" /> },
-                { icon: <FaJs size="2.5rem" /> }
+                { icon: <FaJs size="2.5rem" /> },
+                { icon: <SiTypescript size="2.5rem" /> }
             ]
         },
         {
@@ -29,7 +30,8 @@ const TechnologiesSection = () => {
                 { icon: <SiReact size="2.5rem" /> },
                 { icon: <FaHtml5 size="2.5rem" /> },
                 { icon: <FaCss3Alt size="2.5rem" /> },
-                { icon: <SiTailwindcss size="2.5rem" /> }
+                { icon: <SiTailwindcss size="2.5rem" /> },
+                { icon: <SiChakraui size="2.5rem" /> }
             ]
         },
         {
@@ -37,7 +39,8 @@ const TechnologiesSection = () => {
             items: [
                 { icon: <SiDjango size="2.5rem" /> },
                 { icon: <FaDatabase size="2.5rem" /> },
-                { icon: <SiMysql size="2.5rem" /> }
+                { icon: <SiMysql size="2.5rem" /> },
+                { icon: <SiFirebase size="2.5rem" /> }
             ]
         },
         {
@@ -81,8 +84,9 @@ const TechnologiesSection = () => {
                 px={4}
             >
                 {technologyGroups.map((group, index) => (
-                    <VStack
+                    <Stack
                         key={index}
+                        direction="column"
                         spacing={6}
                         p={6}
                         bg={columnBg}
@@ -100,7 +104,14 @@ const TechnologiesSection = () => {
                             {group.category}
                         </Text>
 
-                        <VStack spacing={6} width="100%">
+                        <Stack
+                            direction={{ base: "row", sm: "column" }}
+                            spacing={6}
+                            width="100%"
+                            flexWrap="wrap"
+                            justifyContent="center"
+                            alignItems="center"
+                        >
                             {group.items.map((tech, techIndex) => (
                                 <Box
                                     key={techIndex}
@@ -116,8 +127,8 @@ const TechnologiesSection = () => {
                                     {tech.icon}
                                 </Box>
                             ))}
-                        </VStack>
-                    </VStack>
+                        </Stack>
+                    </Stack>
                 ))}
             </Flex>
         </Box>
