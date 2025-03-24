@@ -4,7 +4,6 @@ import { DownloadIcon } from "@chakra-ui/icons";
 import CV from "../../assets/Abraham_Morales_Rodríguez_CV.pdf";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import bgVideo from "../../assets/bgVideo3.mp4";
 
 // Variantes de animación
 const textVariant = {
@@ -31,25 +30,6 @@ const HeroSection = () => {
         minH="100vh"
         p={8}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            zIndex: -1,
-            borderBottomLeftRadius: "60px",
-            borderBottomRightRadius: "60px",
-          }}
-        >
-          <source src={bgVideo} type="video/mp4" />
-        </video>
         <motion.div initial="hidden" animate="visible" variants={textVariant}>
           <Heading
             as="h1"

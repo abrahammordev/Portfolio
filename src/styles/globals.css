@@ -1,1 +1,11 @@
-@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  .aurora-background {
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+}
