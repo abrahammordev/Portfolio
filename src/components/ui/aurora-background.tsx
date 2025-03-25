@@ -1,10 +1,12 @@
-"use client";
+// AuroraBackground.tsx
+import { ReactNode } from "react";
+import { Box, ChakraProps, useToken, useColorModeValue } from "@chakra-ui/react";
 import { cn } from "./../../lib/utils";
-import React, { ReactNode } from "react";
 
-interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
+interface AuroraBackgroundProps extends ChakraProps {
   children: ReactNode;
   showRadialGradient?: boolean;
+  className?: string;
 }
 
 export const AuroraBackground = ({
@@ -13,50 +15,85 @@ export const AuroraBackground = ({
   showRadialGradient = true,
   ...props
 }: AuroraBackgroundProps) => {
+  
+  const [auroraLightStart, auroraLightMiddle, auroraLightEnd] = useToken(
+    "colors",
+    ["brand.auroraLight.start", "brand.auroraLight.middle", "brand.auroraLight.end"]
+  );
+
+  const [auroraDarkStart, auroraDarkMiddle, auroraDarkEnd] = useToken(
+    "colors",
+    ["brand.auroraDark.start", "brand.auroraDark.middle", "brand.auroraDark.end"]
+  );
+
+  const auroraColors = useColorModeValue(
+    [auroraLightStart, auroraLightMiddle, auroraLightEnd],
+    [auroraDarkStart, auroraDarkMiddle, auroraDarkEnd]
+  );
+
+  const auroraStyles = {
+    backgroundImage: `
+      repeating-linear-gradient(100deg, 
+        rgba(255,255,255,0.15) 0%, 
+        rgba(255,255,255,0.15) 7%, 
+        transparent 10%, 
+        transparent 12%, 
+        rgba(255,255,255,0.15) 16%),
+      repeating-linear-gradient(100deg, 
+        ${auroraColors[0]} 10%, 
+        ${auroraColors[1]} 15%, 
+        ${auroraColors[2]} 20%, 
+        ${auroraColors[0]} 25%, 
+        ${auroraColors[1]} 30%)
+    `,
+    backgroundSize: "300% 300%, 200% 200%",
+    backgroundPosition: "0% 50%, 0% 50%",
+    filter: "blur(12px)",
+    animation: "aurora 90s linear infinite",
+    maskImage: showRadialGradient
+      ? "radial-gradient(ellipse at 100% 0%, black 40%, transparent 90%)"
+      : undefined,
+    clipPath: "inset(1px)"
+  };
+
   return (
-    <div
-      style={{
-        "--white": "rgb(255 255 255)",
-        "--black": "rgb(0 0 0)",
-        "--transparent": "transparent",
-        "--blue-300": "rgb(147 197 253)",
-        "--blue-400": "rgb(96 165 250)",
-        "--blue-500": "rgb(59 130 246)",
-        "--indigo-300": "rgb(165 180 252)",
-        "--violet-200": "rgb(221 214 254)",
-      } as React.CSSProperties}
-      className={cn(
-        "relative min-h-screen w-full overflow-hidden bg-zinc-50 dark:bg-zinc-900 text-slate-950 transition-bg aurora-background pb-24",
-        className
-      )}
+    <Box
+      as="section"
+      position="relative"
+      width="full"
+      minH="100vh"
+      className={cn(className)}
       {...props}
+      role="region"
+      aria-label="Decorative background"
     >
-      <div className="fixed inset-0 z-0">
-        <div
-          className={cn(
-            `
-          [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
-          [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_16%)]
-          [--aurora:repeating-linear-gradient(100deg,var(--blue-500)_10%,var(--indigo-300)_15%,var(--blue-300)_20%,var(--violet-200)_25%,var(--blue-400)_30%)]
-          [background-image:var(--white-gradient),var(--aurora)]
-          dark:[background-image:var(--dark-gradient),var(--aurora)]
-          [background-size:300%,_300%]
-          [background-position:0%_50%,0%_50%]
-          filter blur-[15px] invert dark:invert-0
-          after:content-[""] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)]
-          after:dark:[background-image:var(--dark-gradient),var(--aurora)]
-          after:[background-size:300%,_300%]
-          after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
-          pointer-events-none
-          absolute inset-0 opacity-70 will-change-transform transform-gpu`,
-            showRadialGradient &&
-            `[mask-image:radial-gradient(ellipse_at_100%_0%,black_30%,var(--transparent)_80%)]`
-          )}
+      <Box
+        position="absolute"
+        inset="0"
+        zIndex={-1}
+        overflow="hidden"
+        pointerEvents="none"
+        aria-hidden="true"
+      >
+        <Box
+          position="absolute"
+          inset="0"
+          opacity={0.6}
+          _dark={{ opacity: 0.45 }}
+          style={auroraStyles}
         />
-      </div>
-      <div className="relative z-10 min-h-screen w-full">
+      </Box>
+
+      <Box
+        position="relative"
+        width="full"
+        height="full"
+        py={16}
+        px={{ base: 4, md: 8 }}
+        transition="all 0.2s ease-in-out"
+      >
         {children}
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
