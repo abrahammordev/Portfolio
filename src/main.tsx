@@ -8,6 +8,7 @@ import './styles/globals.css';
 
 
 createRoot(document.getElementById("root")!).render(
+  //#TODO Fix accesibility issues and improve UX 
   <StrictMode>
     <ChakraProvider theme={extendTheme}>
       <App />

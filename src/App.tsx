@@ -10,18 +10,12 @@ function App() {
   return (
     <Router>
       <Analytics />
-      <div className="aurora-background">
-        <AuroraBackground>
-          <Navbar />
-          <SocialLinks />
-          <div style={{ paddingTop: '60px' }}>
-            <AppRoutes />
-          </div>
-        </AuroraBackground>
-      </div>
-    </Router >
-
-
+      <AuroraBackground>
+        <Navbar />
+        <SocialLinks />
+        <AppRoutes />
+      </AuroraBackground>
+    </Router>
   );
 }
 

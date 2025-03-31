@@ -35,7 +35,7 @@ const HeroSection = () => {
             as="h1"
             fontSize={{ base: "3xl", md: "5xl" }}
             fontWeight="bold"
-            color={"brand.500"}
+            color={"brand.50"}
             fontFamily="'Alegreya Sans SC', sans-serif"
             ml={{ base: 0, md: 10 }}
             mb={6}
