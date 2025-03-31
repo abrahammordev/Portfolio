@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center, Text, useColorModeValue, useColorMode, Button, VStack, HStack, Flex, Icon, Circle } from "@chakra-ui/react";
+import { Box, Center, Text, useColorModeValue, useColorMode, Button, VStack, Flex, Icon, Circle } from "@chakra-ui/react";
 import {
   FaPlane,
   FaCode,
