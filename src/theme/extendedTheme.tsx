@@ -37,23 +37,24 @@ const theme = extendTheme({
 
   colors: {
     brand: {
-      letter: "#BFD7FF",
-      50: "#E5FDFF",  // Fondo claro
-      100: "#BFD7FF", // Azul suave
-      300: "#3b82f6", // Azul medio
-      400: "#2563eb", // Azul más intenso
-      500: "#0B3C49", // Azul oscuro
-      600: "#020F2E", // Azul muy oscuro (fondo oscuro)
+      "letter-light": "#bfd7ff ",
+      "letter-dark": "#020f2e",
+      50: "#E5FDFF",  
+      100: "#BFD7FF", 
+      300: "#3b82f6", 
+      400: "#2563eb", 
+      500: "#0B3C49", 
+      600: "#020F2E", 
 
       auroraLight: {
-        start: "rgba(191, 215, 255, 0.6)",  // Azul cielo claro
-        middle: "rgba(255, 255, 255, 0.4)", // Blanco translúcido
-        end: "rgba(75, 130, 255, 0.6)",     // Azul fuerte
+        start: "rgba(191, 215, 255, 0.6)",  
+        middle: "rgba(255, 255, 255, 0.4)", 
+        end: "rgba(75, 130, 255, 0.6)",     
       },
       auroraDark: {
-        start: "rgba(2, 15, 46, 0.8)",    // Azul oscuro
-        middle: "rgba(20, 40, 90, 0.7)",  // Azul intermedio
-        end: "rgba(191, 215, 255, 0.5)",  // Azul claro translúcido
+        start: "rgba(2, 15, 46, 0.8)",    
+        middle: "rgba(20, 40, 90, 0.7)",  
+        end: "rgba(191, 215, 255, 0.5)",  
       },
     },
   },

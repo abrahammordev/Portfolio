@@ -33,9 +33,9 @@ const HeroSection = () => {
         <motion.div initial="hidden" animate="visible" variants={textVariant}>
           <Heading
             as="h1"
-            fontSize={{ base: "3xl", md: "5xl" }}
+            fontSize={{ base: "4xl", md: "6xl" }}
             fontWeight="bold"
-            color={"brand.50"}
+            color={"brand.letter"}
             fontFamily="'Alegreya Sans SC', sans-serif"
             ml={{ base: 0, md: 10 }}
             mb={6}
@@ -44,9 +44,8 @@ const HeroSection = () => {
           </Heading>
           <Heading
             as="h1"
-            fontSize={{ base: "3xl", md: "3xl" }}
+            fontSize={{ base: "2xl", md: "3xl" }}
             fontWeight="semi-bold"
-            color={"brand.500"}
             fontFamily="'Alegreya Sans SC', sans-serif"
             ml={{ base: 0, md: 10 }}
             mb={6}
@@ -63,7 +62,7 @@ const HeroSection = () => {
         >
           <Text
             fontSize={{ base: "lg", md: "xl" }}
-            color={"brand.500"}
+            color={"brand.letter"}
             fontFamily="'Alegreya Sans SC', sans-serif"
             maxW="600px"
             mb={8}
