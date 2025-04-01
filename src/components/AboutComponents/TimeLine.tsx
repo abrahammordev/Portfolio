@@ -6,6 +6,8 @@ import {
   FaSearch,
   FaTshirt,
   FaUserGraduate,
+  FaTasks,
+  FaDatabase
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
@@ -22,12 +24,28 @@ const TimeLine: React.FC = () => {
   const { colorMode } = useColorMode();
 
   const timelineItems = [
+    
+    {
+      icon: <FaDatabase size={16} />,
+      title: t("TimeLineProject5"),
+      date: t("TimeLineDate5"),
+      description: t("TimeLineProject5Description"),
+      button: false,
+    },
     {
       icon: <FaUserGraduate size={16} />,
       title: t("TimeLineIntro"),
       date: t("TimeLineDate"),
       description: t("TimeLineIntroDescription"),
       button: false,
+    },
+    {
+      icon: <FaTasks size={16} />,
+      title: t("TimeLineProject4"),
+      date: t("TimeLineDate4"),
+      description: t("TimeLineProject4Description"),
+      button: true,
+      link: "https://todo-list-nine-taupe.vercel.app/"
     },
     {
       icon: <FaCode size={16} />,
