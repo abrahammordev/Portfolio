@@ -31,6 +31,9 @@ const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl }:
             maxW={{ base: "100%", sm: "400px" }}
             mx="auto"
             whileHover={{ scale: 1.05 }}
+            flexDirection={"column"}
+            display="flex"
+            justifyContent="space-between"
         >
             {imageUrl && (
                 <Image
@@ -70,7 +73,8 @@ const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl }:
                         </Tag>
                     ))}
                 </HStack>
-
+            </VStack>
+            <VStack spacing={4}>
                 {projectUrl && (
                     <Link href={projectUrl} isExternal _hover={{ textDecoration: "none" }} width="full">
                         <Button

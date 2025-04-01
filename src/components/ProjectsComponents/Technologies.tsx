@@ -82,6 +82,7 @@ const TechnologiesSection = () => {
                 maxW="1200px"
                 mx="auto"
                 px={4}
+                textAlign={{ base: "center", md: "center" }}
             >
                 {technologyGroups.map((group, index) => (
                     <Stack
