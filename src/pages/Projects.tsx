@@ -56,19 +56,7 @@ const Projects: React.FC = () => {
             imageUrl: QaRdrobeImg,
             projectUrl: "https://qardrobe.com",
         },
-        {
-            title: t("Project5Title"),
-            description: t("Project5Description"),
-            technologies: [
-                { name: "TypeScript", icon: <i className="devicon-typescript-plain"></i> },
-                { name: "React", icon: <i className="devicon-react-original"></i> },
-                { name: "Tailwind", icon: <i className="devicon-tailwind-plain"></i> },
-                { name: "ShadCN", icon: <i className="devicon-shadcn-plain"></i> },
-
-            ],
-            imageUrl: TodoImg,
-            projectUrl: "https://todo-list-nine-taupe.vercel.app/",
-        },
+        
 
     ];
 
