@@ -39,6 +39,7 @@ const TimeLine: React.FC = () => {
       description: t("TimeLineIntroDescription"),
       button: false,
     },
+    
     {
       icon: <FaTasks size={16} />,
       title: t("TimeLineProject4"),

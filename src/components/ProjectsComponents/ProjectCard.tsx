@@ -28,7 +28,7 @@ const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl }:
                 boxShadow: "2xl",
                 transform: "scale(1.03)",
             }}
-            maxW={{ base: "100%", sm: "400px" }}
+            maxW={{ base: "100%", sm: "500px" }}
             mx="auto"
             whileHover={{ scale: 1.05 }}
             flexDirection={"column"}

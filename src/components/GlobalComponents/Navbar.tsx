@@ -148,6 +148,10 @@ const Navbar: React.FC = () => {
             bg="transparent"
             color={colorMode === "dark" ? "white" : "brand.100"}
             size={["sm", "md"]}
+            _hover={{
+              bg: colorMode === "dark" ? "brand.100" : "brand.100",
+            }}
+
           >
             {colorMode === "dark" ? <SunIcon color="white" /> : <MoonIcon color="black" />}
           </Button>
