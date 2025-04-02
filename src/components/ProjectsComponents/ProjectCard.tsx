@@ -67,6 +67,7 @@ const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl }:
                             py={2}
                             display="flex"
                             alignItems="center"
+                            textAlign={"center"}
                             gap={2}
                         >
                             {tech.icon} {tech.name}

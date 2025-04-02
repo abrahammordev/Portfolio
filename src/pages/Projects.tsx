@@ -5,6 +5,8 @@ import AirportImg from "../assets/AeropuertoImg.webp";
 import ColorEaseImg from "../assets/ColorEaseImg.webp";
 import QaRdrobeImg from "../assets/QaRdrobeImg.webp";
 import PortfolioImg from "../assets/PortfolioImg.webp";
+import TodoApp from "../assets/TodoApp.webp";
+import SmartContractSol from "../assets/SmartContractSol.webp";
 import { useTranslation } from "react-i18next";
 
 const Projects: React.FC = () => {
@@ -25,6 +27,31 @@ const Projects: React.FC = () => {
             projectUrl: "#",
         },
         {
+            title: t("Project6Title"),
+            description: t("Project6Description"),
+            technologies: [
+                { name: "Rust", icon: <i className="devicon-rust-plain"></i> },
+                { name: "Anchor", icon: <i className="devicon-anchor-original"></i> },
+                { name: "TypeScript", icon: <i className="devicon-typescript-plain"></i> },
+            ],
+            imageUrl: SmartContractSol,
+            projectUrl: "https://github.com/abrahammordev/QaRdrobe-Traceability.git",
+        },
+        {
+            title: t("Project5Title"),
+            description: t("Project5Description"),
+            technologies: [
+                { name: "TypeScript", icon: <i className="devicon-javascript-plain"></i> },
+                { name: "React", icon: <i className="devicon-react-original"></i> },
+                { name: "Tailwind", icon: <i className="devicon-tailwindcss-plain"></i> },
+                { name: "ShadCN", icon: <i className="devicon-react-original"></i> },
+
+            ],
+            imageUrl: TodoApp,
+            projectUrl: "https://todo-list-nine-taupe.vercel.app/",
+        },
+
+        {
             title: t("Project2Title"),
             description: t("Project2Description"),
             technologies: [
@@ -35,6 +62,7 @@ const Projects: React.FC = () => {
             imageUrl: ColorEaseImg,
             projectUrl: "https://color-ease.vercel.app/",
         },
+
         {
             title: t("Project3Title"),
             description: t("Project3Description"),
@@ -56,7 +84,8 @@ const Projects: React.FC = () => {
             imageUrl: QaRdrobeImg,
             projectUrl: "https://qardrobe.com",
         },
-        
+
+
 
     ];
 
