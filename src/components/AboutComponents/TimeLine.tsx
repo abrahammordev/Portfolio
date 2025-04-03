@@ -1,5 +1,18 @@
 import React from "react";
-import { Box, Center, Text, useColorModeValue, useColorMode, Button, VStack, Flex, Icon, Circle } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Text,
+  useColorModeValue,
+  useColorMode,
+  Button,
+  VStack,
+  Flex,
+  Icon,
+  Circle,
+  Image,
+} from "@chakra-ui/react";
+import { IconType } from "react-icons";
 import {
   FaPlane,
   FaCode,
@@ -7,8 +20,9 @@ import {
   FaTshirt,
   FaUserGraduate,
   FaTasks,
-  FaDatabase
+  FaDatabase,
 } from "react-icons/fa";
+import Ilias from "./../../assets/IliasLogo.webp";
 import { useTranslation } from "react-i18next";
 
 const TimeLine: React.FC = () => {
@@ -24,32 +38,38 @@ const TimeLine: React.FC = () => {
   const { colorMode } = useColorMode();
 
   const timelineItems = [
-    
     {
-      icon: <FaDatabase size={16} />,
+      icon: Ilias,
+      isImage: true,
+      title: t("TimeLineProject6"),
+      date: t("TimeLineDate6"),
+      description: t("TimeLineProject6Description"),
+      button: false,
+    },
+    {
+      icon: FaDatabase,
       title: t("TimeLineProject5"),
       date: t("TimeLineDate5"),
       description: t("TimeLineProject5Description"),
       button: false,
     },
     {
-      icon: <FaUserGraduate size={16} />,
+      icon: FaUserGraduate,
       title: t("TimeLineIntro"),
       date: t("TimeLineDate"),
       description: t("TimeLineIntroDescription"),
       button: false,
     },
-    
     {
-      icon: <FaTasks size={16} />,
+      icon: FaTasks,
       title: t("TimeLineProject4"),
       date: t("TimeLineDate4"),
       description: t("TimeLineProject4Description"),
       button: true,
-      link: "https://todo-list-nine-taupe.vercel.app/"
+      link: "https://todo-list-nine-taupe.vercel.app/",
     },
     {
-      icon: <FaCode size={16} />,
+      icon: FaCode,
       title: t("TimeLineProject1"),
       date: t("TimeLineDate1"),
       description: t("TimeLineProject1Description"),
@@ -57,7 +77,7 @@ const TimeLine: React.FC = () => {
       link: "https://color-ease.vercel.app/",
     },
     {
-      icon: <FaTshirt size={16} />,
+      icon: FaTshirt,
       title: t("TimeLineProject3"),
       date: t("TimeLineDate3"),
       description: t("TimeLineProject3Description"),
@@ -65,7 +85,7 @@ const TimeLine: React.FC = () => {
       link: "https://www.qardrobe.com",
     },
     {
-      icon: <FaPlane size={16} />,
+      icon: FaPlane,
       title: t("TimeLineProject2"),
       date: t("TimeLineDate2"),
       description: t("TimeLineProject2Description"),
@@ -82,10 +102,20 @@ const TimeLine: React.FC = () => {
         borderRadius="xl"
         boxShadow="xl"
         backdropFilter="blur(15px)"
-        bg={colorMode === "light" ? "linear-gradient(135deg, #f0f4f8, #d9e2ec)" : "linear-gradient(135deg, #2d3748, #1a202c)"}
+        bg={
+          colorMode === "light"
+            ? "linear-gradient(135deg, #f0f4f8, #d9e2ec)"
+            : "linear-gradient(135deg, #2d3748, #1a202c)"
+        }
         overflow="hidden"
       >
-        <Text fontSize="3xl" fontWeight="bold" color={textColor} mb={10} textAlign="center">
+        <Text
+          fontSize="3xl"
+          fontWeight="bold"
+          color={textColor}
+          mb={10}
+          textAlign="center"
+        >
           {t("TimeLineTitle") || "My Journey"}
         </Text>
         <VStack
@@ -106,7 +136,7 @@ const TimeLine: React.FC = () => {
           {timelineItems.map((item, index) => (
             <Flex key={index} align="start" position="relative" zIndex={1}>
               <Circle
-                size="40px"
+                size="50px"
                 bg={iconBgColor}
                 color={iconColor}
                 mr={4}
@@ -116,7 +146,11 @@ const TimeLine: React.FC = () => {
                 border="4px solid"
                 borderColor={useColorModeValue("white", "gray.800")}
               >
-                <Icon as={() => item.icon} boxSize={4} />
+                {item.isImage ? (
+                  <Image src={item.icon} alt="Ilias" boxSize="16px" objectFit="contain" />
+                ) : (
+                  <Icon as={item.icon as IconType} boxSize={4} />
+                )}
               </Circle>
 
               <Box flex="1" pt={1}>

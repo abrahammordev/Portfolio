@@ -25,6 +25,7 @@ const Projects: React.FC = () => {
             ],
             imageUrl: PortfolioImg,
             projectUrl: "#",
+            githubUrl: "https://github.com/abrahammordev/Portfolio", 
         },
         {
             title: t("Project6Title"),
@@ -35,7 +36,8 @@ const Projects: React.FC = () => {
                 { name: "TypeScript", icon: <i className="devicon-typescript-plain"></i> },
             ],
             imageUrl: SmartContractSol,
-            projectUrl: "https://github.com/abrahammordev/QaRdrobe-Traceability.git",
+            projectUrl: "https://github.com/abrahammordev/QaRdrobe-Traceability.git", 
+            githubUrl: "https://github.com/abrahammordev/QaRdrobe-Traceability.git",
         },
         {
             title: t("Project5Title"),
@@ -49,6 +51,7 @@ const Projects: React.FC = () => {
             ],
             imageUrl: TodoApp,
             projectUrl: "https://todo-list-nine-taupe.vercel.app/",
+            githubUrl: "https://github.com/abrahammordev/TODOList", 
         },
 
         {
@@ -61,6 +64,7 @@ const Projects: React.FC = () => {
             ],
             imageUrl: ColorEaseImg,
             projectUrl: "https://color-ease.vercel.app/",
+            githubUrl: "https://github.com/abrahammordev/ColorEase",
         },
 
         {
@@ -73,6 +77,7 @@ const Projects: React.FC = () => {
             ],
             imageUrl: AirportImg,
             projectUrl: "https://github.com/abrahammordev/AeropuertoGUI",
+            githubUrl: "https://github.com/abrahammordev/AeropuertoGUI",
         },
         {
             title: t("Project4Title"),
@@ -82,7 +87,7 @@ const Projects: React.FC = () => {
                 { name: "Trello", icon: <i className="devicon-trello-plain"></i> },
             ],
             imageUrl: QaRdrobeImg,
-            projectUrl: "https://qardrobe.com",
+            projectUrl: "https://qardrobe.com", 
         },
 
 
@@ -118,6 +123,7 @@ const Projects: React.FC = () => {
                             technologies={project.technologies}
                             imageUrl={project.imageUrl}
                             projectUrl={project.projectUrl}
+                            githubUrl={project.githubUrl} 
                         />
                     ))}
                 </SimpleGrid>

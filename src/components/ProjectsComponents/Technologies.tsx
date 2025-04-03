@@ -9,9 +9,11 @@ import {
     FaDatabase,
     FaHtml5,
     FaCss3Alt,
-    FaAws
+    FaAws,
+    FaPhp,
+    
 } from "react-icons/fa";
-import { SiDjango, SiReact, SiMysql, SiTailwindcss, SiScrumalliance, SiTypescript, SiChakraui, SiFirebase } from "react-icons/si";
+import { SiDjango, SiReact, SiMysql, SiTailwindcss, SiScrumalliance, SiTypescript, SiChakraui, SiFirebase, SiGrafana, SiFigma, SiTrello } from "react-icons/si";
 
 const TechnologiesSection = () => {
     const technologyGroups = [
@@ -21,7 +23,9 @@ const TechnologiesSection = () => {
                 { icon: <FaJava size="2.5rem" /> },
                 { icon: <FaPython size="2.5rem" /> },
                 { icon: <FaJs size="2.5rem" /> },
-                { icon: <SiTypescript size="2.5rem" /> }
+                { icon: <SiTypescript size="2.5rem" /> },
+                { icon: <FaPhp size="2.5rem" /> }
+
             ]
         },
         {
@@ -47,7 +51,8 @@ const TechnologiesSection = () => {
             category: "DevOps",
             items: [
                 { icon: <FaDocker size="2.5rem" /> },
-                { icon: <FaAws size="2.5rem" /> }
+                { icon: <FaAws size="2.5rem" /> },
+                { icon: <SiGrafana size="2.5rem" /> },
             ]
         },
         {
@@ -55,7 +60,9 @@ const TechnologiesSection = () => {
             items: [
                 { icon: <FaGitAlt size="2.5rem" /> },
                 { icon: <FaGithub size="2.5rem" /> },
-                { icon: <SiScrumalliance size="2.5rem" /> }
+                { icon: <SiScrumalliance size="2.5rem" /> },
+                { icon: <SiFigma size="2.5rem" /> },
+                { icon: <SiTrello size="2.5rem" /> }
             ]
         }
     ];

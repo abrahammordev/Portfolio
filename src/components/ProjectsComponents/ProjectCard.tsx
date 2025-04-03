@@ -1,6 +1,7 @@
-import { Box, Image, Text, VStack, HStack, Tag, Button, Link, useColorModeValue } from "@chakra-ui/react";
+import { Box, Image, Text, VStack, HStack, Tag, Button, Link, useColorModeValue, Icon } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { FaGithub } from "react-icons/fa";
 
 interface ProjectCardProps {
     title: string;
@@ -8,11 +9,12 @@ interface ProjectCardProps {
     technologies: { name: string; icon: JSX.Element }[];
     imageUrl?: string;
     projectUrl?: string;
+    githubUrl?: string;
 }
 
 const MotionBox = motion(Box);
 
-const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl, githubUrl }: ProjectCardProps) => {
     const { t } = useTranslation();
 
     return (
@@ -75,25 +77,45 @@ const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl }:
                     ))}
                 </HStack>
             </VStack>
-            <VStack spacing={4}>
-                {projectUrl && (
-                    <Link href={projectUrl} isExternal _hover={{ textDecoration: "none" }} width="full">
+            <HStack spacing={4} mt={6} width="full" justify="center">
+                {githubUrl && (
+                    <Link href={githubUrl} isExternal _hover={{ textDecoration: "none" }} flex={1}>
+                        <Button
+                            colorScheme="gray"
+                            variant="outline"
+                            size="md"
+                            width="full"
+                            leftIcon={<Icon as={FaGithub} />}
+                            _hover={{
+                                bg: useColorModeValue("gray.200", "gray.700"),
+                                transform: "translateY(-2px)",
+                                boxShadow: "lg",
+                            }}
+                        >
+                            GitHub
+                        </Button>
+                    </Link>
+                )}
+                {projectUrl && projectUrl !== githubUrl && (
+                    <Link href={projectUrl} isExternal _hover={{ textDecoration: "none" }} flex={1}>
                         <Button
                             colorScheme="blue"
                             variant="solid"
-                            size="lg"
+                            size="md"
                             width="full"
-                            mt={4}
                             _hover={{
                                 bg: "blue.600",
-                                transform: "scale(1.05)",
+                                transform: "translateY(-2px)",
+                                boxShadow: "lg",
                             }}
                         >
                             {t('ProjectButton')}
                         </Button>
                     </Link>
                 )}
-            </VStack>
+
+
+            </HStack>
         </MotionBox>
     );
 };
