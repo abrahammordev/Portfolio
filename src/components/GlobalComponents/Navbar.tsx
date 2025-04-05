@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
                 isRound
                 bg="transparent"
                 color={iconColor}
-                 _hover={{ bg: fabHoverBgColor }}
+                _hover={{ bg: fabHoverBgColor }}
               />
             </Stack>
           </ScaleFade>
@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
         zIndex={10}
         transition="bottom 0.3s ease-in-out, transform 0.3s ease-in-out"
       >
-        <Stack 
+        <Stack
           align="center"
           spacing={2}
           boxShadow="0 0 80px #1014196b"
@@ -130,53 +130,12 @@ const Navbar: React.FC = () => {
           maxWidth="1200px"
           mx="auto"
         >
-          <Flex gap={3}>
-             <IconButton
-               as="a"
-               href="https://github.com/abrahammordev"
-               target="_blank"
-               aria-label="GitHub"
-               icon={<FaGithub size={22}/>} 
-               color={iconColor}
-               isRound
-               minWidth="48px" 
-               minHeight="48px"
-               bg="transparent"
-                _hover={{ bg: fabHoverBgColor }}
-             />
-             <IconButton
-               as="a"
-               href="https://www.linkedin.com/in/abrahammordev"
-               target="_blank"
-               aria-label="LinkedIn"
-               icon={<FaLinkedin size={22}/>}
-               color={iconColor}
-               isRound
-               minWidth="48px"
-               minHeight="48px"
-               bg="transparent"
-                _hover={{ bg: fabHoverBgColor }}
-             />
-             <IconButton
-               as="a"
-               href="mailto:abrahammordev@gmail.com"
-               target="_blank"
-               aria-label="Gmail"
-               icon={<FaGoogle size={22}/>}
-               color={iconColor}
-               isRound
-               minWidth="48px"
-               minHeight="48px"
-               bg="transparent"
-                _hover={{ bg: fabHoverBgColor }}
-             />
-          </Flex>
 
           <Flex
             alignItems="center"
             justifyContent="space-between"
             gap={8}
-            width="100%" 
+            width="100%"
             px={6}
           >
             <Flex as="nav" gap={4} alignItems="center">
@@ -231,7 +190,7 @@ const Navbar: React.FC = () => {
                 size="md"
                 minWidth="48px"
                 minHeight="48px"
-                 _hover={{ bg: fabHoverBgColor }}
+                _hover={{ bg: fabHoverBgColor }}
                 aria-label={`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`}
               >
                 {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
