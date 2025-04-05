@@ -1,163 +1,246 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import RoutePaths from "../../routes/RoutePaths";
-import { Button, useColorMode, Box, Flex, IconButton } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { FaGithub, FaLinkedin, FaGoogle } from "react-icons/fa";
+import {
+  Button,
+  useColorMode,
+  Box,
+  Flex,
+  IconButton,
+  Stack,
+  useDisclosure,
+  ScaleFade,
+} from "@chakra-ui/react";
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { FaGithub, FaLinkedin, FaGoogle, FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa";
 import LanguageSwitch from "./LanguageSwitch";
-import { FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const [isScrolled, setIsScrolled] = React.useState(false);
+  const { isOpen: isMenuOpen, onToggle: toggleMenu } = useDisclosure();
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight / 3) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navItemBaseStyle = {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    minWidth: "48px",
+    minHeight: "48px",
+  };
+
+  const fabBgColor = colorMode === "light" ? "rgba(255, 255, 255, 0.8)" : "rgba(54, 65, 80, 0.8)";
+  const fabHoverBgColor = colorMode === "light" ? "rgba(240, 240, 240, 0.9)" : "rgba(74, 85, 104, 0.9)";
+  const iconColor = colorMode === "light" ? "black" : "white";
+
   return (
-    <Box
-      boxShadow="0 0 80px #1014196b"
-      p={3}
-      transform={isScrolled ? "scale(0.9)" : "scale(1)"}
-      transition="transform 0.3s ease-in-out"
-      backdropFilter="blur(25px)"
-      bg={colorMode === "light" ? "rgba(255, 255, 255, 0.55)" : "rgba(54, 65, 80, 0.6)"}
-
-      borderRadius={45}
-      width="fit-content"
-      maxWidth="1200px"
-      mx="auto"
-      mb={4}
-      alignContent="center"
-      position="fixed"
-      bottom={0}
-      left={0}
-      right={0}
-      zIndex={1}
-      gap={4}
-    >
-      <Flex display={{ base: "flex", md: "none" }} flexDirection="row" alignItems="center" justifyContent="center" gap={4}>
-        <IconButton
-          as="a"
-          href="https://github.com/abrahammordev"
-          target="_blank"
-          aria-label="GitHub"
-          icon={<FaGithub />}
-          color={colorMode === "light" ? "#000" : "#fff"}
-          isRound
-          _active={{
-            opacity: 1,
-          }}
-          bg="transparent"
-        />
-        <IconButton
-          as="a"
-          href="https://www.linkedin.com/in/abrahammordev"
-          target="_blank"
-          aria-label="LinkedIn"
-          icon={<FaLinkedin />}
-          color={colorMode === "light" ? "#000" : "#fff"}
-          isRound
-          _active={{
-            opacity: 1,
-          }}
-          bg="transparent"
-        />
-        <IconButton
-          as="a"
-          href="mailto:tu-abrahammordev@gmail.com"
-          target="_blank"
-          aria-label="Gmail"
-          icon={<FaGoogle />}
-          color={colorMode === "light" ? "#000" : "#fff"}
-          isRound
-          _active={{
-            opacity: 1,
-          }}
-          bg="transparent"
-        />
-      </Flex>
-      <Flex
-        alignItems="center"
-        justifyContent="space-between"
-        flexDirection={["row", "row"]}
-        px={[2, 6]}
-        gap={[4, 8]}
+    <>
+      <Box
+        position="fixed"
+        bottom="2rem"
+        right="2rem"
+        zIndex={10}
+        display={{ base: "block", md: "none" }}
       >
-        <Flex
-          as="nav"
-          gap={[2, 4]}
-          alignItems="center"
-          flexDirection={["row", "row"]}
+        <Stack spacing={4} align="flex-end">
+          <ScaleFade initialScale={0.9} in={isMenuOpen}>
+            <Stack
+              p={3}
+              bg={fabBgColor}
+              backdropFilter="blur(10px)"
+              borderRadius="lg"
+              boxShadow="lg"
+              spacing={3}
+              display={isMenuOpen ? "flex" : "none"}
+              align="center"
+            >
+              <NavLink to={RoutePaths.Home} onClick={toggleMenu} style={navItemBaseStyle} aria-label="Home">
+                <FaHome size={20} color={iconColor} />
+              </NavLink>
+              <NavLink to={RoutePaths.About} onClick={toggleMenu} style={navItemBaseStyle} aria-label="About Me">
+                <FaUser size={20} color={iconColor} />
+              </NavLink>
+              <NavLink to={RoutePaths.Projects} onClick={toggleMenu} style={navItemBaseStyle} aria-label="Projects">
+                <FaCode size={20} color={iconColor} />
+              </NavLink>
+              <NavLink to={RoutePaths.Contact} onClick={toggleMenu} style={navItemBaseStyle} aria-label="Contact">
+                <FaEnvelope size={20} color={iconColor} />
+              </NavLink>
+              <LanguageSwitch />
+              <IconButton
+                aria-label={`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`}
+                icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+                onClick={toggleColorMode}
+                size="md"
+                minWidth="48px"
+                minHeight="48px"
+                isRound
+                bg="transparent"
+                color={iconColor}
+                 _hover={{ bg: fabHoverBgColor }}
+              />
+            </Stack>
+          </ScaleFade>
+
+          <IconButton
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-controls="fab-menu"
+            aria-expanded={isMenuOpen}
+            icon={isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+            onClick={toggleMenu}
+            isRound
+            size="lg"
+            minWidth="56px"
+            minHeight="56px"
+            bg={fabBgColor}
+            color={iconColor}
+            boxShadow="lg"
+            _hover={{ bg: fabHoverBgColor }}
+          />
+        </Stack>
+      </Box>
+
+      <Box
+        display={{ base: "none", md: "block" }}
+        position="fixed"
+        bottom={isScrolled ? "1rem" : "2rem"}
+        left="50%"
+        transform="translateX(-50%)"
+        zIndex={10}
+        transition="bottom 0.3s ease-in-out, transform 0.3s ease-in-out"
+      >
+        <Stack 
+          align="center"
+          spacing={2}
+          boxShadow="0 0 80px #1014196b"
+          p={3}
+          transform={isScrolled ? "scale(0.9)" : "scale(1)"}
+          transition="transform 0.3s ease-in-out"
+          backdropFilter="blur(25px)"
+          bg={colorMode === "light" ? "rgba(255, 255, 255, 0.55)" : "rgba(54, 65, 80, 0.6)"}
+          borderRadius={45}
+          width="fit-content"
+          maxWidth="1200px"
+          mx="auto"
         >
-          <NavLink
-            to={RoutePaths.Home}
-            className={({ isActive }) =>
-              `transition-transform duration-300 ${isActive ? "text-brand-300 scale-150" : "text-inherit"
-              } hover:text-brand-200 hover:scale-140`
-            }
-          >
-            <FaHome size={25} color={colorMode === "light" ? "#000" : "#fff"} />
-          </NavLink>
+          <Flex gap={3}>
+             <IconButton
+               as="a"
+               href="https://github.com/abrahammordev"
+               target="_blank"
+               aria-label="GitHub"
+               icon={<FaGithub size={22}/>} 
+               color={iconColor}
+               isRound
+               minWidth="48px" 
+               minHeight="48px"
+               bg="transparent"
+                _hover={{ bg: fabHoverBgColor }}
+             />
+             <IconButton
+               as="a"
+               href="https://www.linkedin.com/in/abrahammordev"
+               target="_blank"
+               aria-label="LinkedIn"
+               icon={<FaLinkedin size={22}/>}
+               color={iconColor}
+               isRound
+               minWidth="48px"
+               minHeight="48px"
+               bg="transparent"
+                _hover={{ bg: fabHoverBgColor }}
+             />
+             <IconButton
+               as="a"
+               href="mailto:abrahammordev@gmail.com"
+               target="_blank"
+               aria-label="Gmail"
+               icon={<FaGoogle size={22}/>}
+               color={iconColor}
+               isRound
+               minWidth="48px"
+               minHeight="48px"
+               bg="transparent"
+                _hover={{ bg: fabHoverBgColor }}
+             />
+          </Flex>
 
-          <NavLink
-            to={RoutePaths.About}
-            className={({ isActive }) =>
-              `transition-transform duration-300 ${isActive ? "text-brand-300 scale-150" : "text-inherit"
-              } hover:text-brand-200 hover:scale-140`
-            }
+          <Flex
+            alignItems="center"
+            justifyContent="space-between"
+            gap={8}
+            width="100%" 
+            px={6}
           >
-            <FaUser size={25} color={colorMode === "light" ? "#000" : "#fff"} />
-          </NavLink>
+            <Flex as="nav" gap={4} alignItems="center">
+              <NavLink
+                to={RoutePaths.Home}
+                className={({ isActive }) =>
+                  `transition-transform duration-300 ${isActive ? "text-brand-300 scale-125" : "text-inherit"} hover:text-brand-200 hover:scale-110`
+                }
+                aria-label="Home"
+                style={navItemBaseStyle}
+              >
+                <FaHome size={25} color={iconColor} />
+              </NavLink>
+              <NavLink
+                to={RoutePaths.About}
+                className={({ isActive }) =>
+                  `transition-transform duration-300 ${isActive ? "text-brand-300 scale-125" : "text-inherit"} hover:text-brand-200 hover:scale-110`
+                }
+                aria-label="About Me"
+                style={navItemBaseStyle}
+              >
+                <FaUser size={25} color={iconColor} />
+              </NavLink>
+              <NavLink
+                to={RoutePaths.Projects}
+                className={({ isActive }) =>
+                  `transition-transform duration-300 ${isActive ? "text-brand-300 scale-125" : "text-inherit"} hover:text-brand-200 hover:scale-110`
+                }
+                aria-label="Projects"
+                style={navItemBaseStyle}
+              >
+                <FaCode size={25} color={iconColor} />
+              </NavLink>
+              <NavLink
+                to={RoutePaths.Contact}
+                className={({ isActive }) =>
+                  `transition-transform duration-300 ${isActive ? "text-brand-300 scale-125" : "text-inherit"} hover:text-brand-200 hover:scale-110`
+                }
+                aria-label="Contact"
+                style={navItemBaseStyle}
+              >
+                <FaEnvelope size={25} color={iconColor} />
+              </NavLink>
+            </Flex>
 
-          <NavLink
-            to={RoutePaths.Projects}
-            className={({ isActive }) =>
-              `transition-transform duration-300 ${isActive ? "text-brand-300 scale-150" : "text-inherit"
-              } hover:text-brand-200 hover:scale-140`
-            }
-          >
-            <FaCode size={25} color={colorMode === "light" ? "#000" : "#fff"} />
-          </NavLink>
-
-          <NavLink
-            to={RoutePaths.Contact}
-            className={({ isActive }) =>
-              `transition-transform duration-300 ${isActive ? "text-brand-300 scale-150" : "text-inherit"
-              } hover:text-brand-200 hover:scale-140`
-            }
-          >
-            <FaEnvelope size={25} color={colorMode === "light" ? "#000" : "#fff"} />
-          </NavLink>
-        </Flex>
-
-        <Flex gap={[1, 2]} alignItems="center" flexDirection={["row", "row"]}>
-          <LanguageSwitch />
-          <Button
-            onClick={toggleColorMode}
-            bg="transparent"
-            color={colorMode === "dark" ? "white" : "brand.100"}
-            size={["sm", "md"]}
-            _hover={{
-              bg: colorMode === "dark" ? "brand.100" : "brand.100",
-            }}
-
-          >
-            {colorMode === "dark" ? <SunIcon color="white" /> : <MoonIcon color="black" />}
-          </Button>
-        </Flex>
-      </Flex>
-    </Box>
+            <Flex gap={2} alignItems="center">
+              <LanguageSwitch />
+              <Button
+                onClick={toggleColorMode}
+                bg="transparent"
+                color={iconColor}
+                size="md"
+                minWidth="48px"
+                minHeight="48px"
+                 _hover={{ bg: fabHoverBgColor }}
+                aria-label={`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`}
+              >
+                {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+              </Button>
+            </Flex>
+          </Flex>
+        </Stack>
+      </Box>
+    </>
   );
 };
 
