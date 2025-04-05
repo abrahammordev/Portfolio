@@ -12,7 +12,7 @@ import {
   ScaleFade,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { FaGithub, FaLinkedin, FaGoogle, FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaCode, FaEnvelope } from "react-icons/fa";
 import LanguageSwitch from "./LanguageSwitch";
 
 const Navbar: React.FC = () => {
