@@ -6,7 +6,7 @@ import ScrollToTop from "./ScrollTop";
 const Home = lazy(() => import("../pages/Home"));
 const About = lazy(() => import("../pages/About"));
 const Contact = lazy(() => import("../pages/Contact"));
-const Projects = lazy(() => import("../pages/Projects"));
+const Projects = lazy(() => import("../../public/Projects"));
 
 const AppRoutes: React.FC = () => {
   return (

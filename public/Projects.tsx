@@ -1,6 +1,6 @@
 import { Container, SimpleGrid, Heading, Box, useColorModeValue } from "@chakra-ui/react";
-import TechnologiesSection from "../components/ProjectsComponents/Technologies";
-import ProjectCard from "../components/ProjectsComponents/ProjectCard";
+import TechnologiesSection from "../src/components/ProjectsComponents/Technologies";
+import ProjectCard from "../src/components/ProjectsComponents/ProjectCard";
 import { useTranslation } from "react-i18next";
 
 const Projects: React.FC = () => {
