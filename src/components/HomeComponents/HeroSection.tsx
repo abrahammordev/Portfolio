@@ -1,7 +1,6 @@
 import { Button, Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { DownloadIcon } from "@chakra-ui/icons";
-import CV from "../../assets/Abraham_Morales_Rodríguez_CV.pdf";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
@@ -85,7 +84,7 @@ const HeroSection = () => {
             bg={buttonBg}
             _hover={{ bg: buttonHoverBg }}
             as="a"
-            href={CV}
+            href="/Abraham_Morales_Rodríguez_CV.pdf" 
             download="Abraham_Morales_CV.pdf"
             mb={4}
             color={"white"}

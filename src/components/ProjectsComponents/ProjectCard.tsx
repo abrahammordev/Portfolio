@@ -46,6 +46,7 @@ const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl, g
                     objectFit="cover"
                     h="200px"
                     w="100%"
+                    loading="lazy" 
                 />
             )}
 

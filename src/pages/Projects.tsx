@@ -1,12 +1,6 @@
 import { Container, SimpleGrid, Heading, Box, useColorModeValue } from "@chakra-ui/react";
 import TechnologiesSection from "../components/ProjectsComponents/Technologies";
 import ProjectCard from "../components/ProjectsComponents/ProjectCard";
-import AirportImg from "../assets/AeropuertoImg.webp";
-import ColorEaseImg from "../assets/ColorEaseImg.webp";
-import QaRdrobeImg from "../assets/QaRdrobeImg.webp";
-import PortfolioImg from "../assets/PortfolioImg.webp";
-import TodoApp from "../assets/TodoApp.webp";
-import SmartContractSol from "../assets/SmartContractSol.webp";
 import { useTranslation } from "react-i18next";
 
 const Projects: React.FC = () => {
@@ -23,7 +17,7 @@ const Projects: React.FC = () => {
                 { name: "Tailwind", icon: <i className="devicon-tailwind-plain"></i> },
                 { name: "Chakra UI", icon: <i className="devicon-chakra-ui-plain"></i> },
             ],
-            imageUrl: PortfolioImg,
+            imageUrl: "/PortfolioImg.webp", 
             projectUrl: "#",
             githubUrl: "https://github.com/abrahammordev/Portfolio", 
         },
@@ -35,7 +29,7 @@ const Projects: React.FC = () => {
                 { name: "Anchor", icon: <i className="devicon-anchor-original"></i> },
                 { name: "TypeScript", icon: <i className="devicon-typescript-plain"></i> },
             ],
-            imageUrl: SmartContractSol,
+            imageUrl: "/SmartContractSol.webp", 
             projectUrl: "https://github.com/abrahammordev/QaRdrobe-Traceability.git", 
             githubUrl: "https://github.com/abrahammordev/QaRdrobe-Traceability.git",
         },
@@ -49,7 +43,7 @@ const Projects: React.FC = () => {
                 { name: "ShadCN", icon: <i className="devicon-react-original"></i> },
 
             ],
-            imageUrl: TodoApp,
+            imageUrl: "/TodoApp.webp", 
             projectUrl: "https://todo-list-nine-taupe.vercel.app/",
             githubUrl: "https://github.com/abrahammordev/TODOList", 
         },
@@ -62,7 +56,7 @@ const Projects: React.FC = () => {
                 { name: "React", icon: <i className="devicon-react-original"></i> },
                 { name: "CSS Modules", icon: <i className="devicon-css3-plain"></i> },
             ],
-            imageUrl: ColorEaseImg,
+            imageUrl: "/ColorEaseImg.webp", 
             projectUrl: "https://color-ease.vercel.app/",
             githubUrl: "https://github.com/abrahammordev/ColorEase",
         },
@@ -75,7 +69,7 @@ const Projects: React.FC = () => {
                 { name: "Swing", icon: <i className="devicon-java-plain"></i> },
                 { name: "MySQL", icon: <i className="devicon-mysql-plain"></i> },
             ],
-            imageUrl: AirportImg,
+            imageUrl: "/AeropuertoImg.webp", 
             projectUrl: "https://github.com/abrahammordev/AeropuertoGUI",
             githubUrl: "https://github.com/abrahammordev/AeropuertoGUI",
         },
@@ -86,7 +80,7 @@ const Projects: React.FC = () => {
                 { name: "Framer", icon: <i className="devicon-framer-original"></i> },
                 { name: "Trello", icon: <i className="devicon-trello-plain"></i> },
             ],
-            imageUrl: QaRdrobeImg,
+            imageUrl: "/QaRdrobeImg.webp",
             projectUrl: "https://qardrobe.com", 
         },
 
