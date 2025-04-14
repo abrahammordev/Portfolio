@@ -61,18 +61,90 @@ const Navbar: React.FC = () => {
               display={isMenuOpen ? "flex" : "none"}
               align="center"
             >
-              <NavLink to={RoutePaths.Home} onClick={toggleMenu} style={navItemBaseStyle} aria-label="Home">
-                <FaHome size={20} color={iconColor} />
+              <NavLink
+                to={RoutePaths.Home}
+                onClick={toggleMenu}
+                aria-label="Home"
+                style={{
+                  ...navItemBaseStyle,
+                  width: '100%',
+                  padding: '0.75rem 1rem',
+                  borderRadius: '0.5rem',
+                  transition: 'background-color 0.2s ease-in-out, color 0.2s ease-in-out',
+                  textDecoration: 'none',
+                }}
+                className={({ isActive }) =>
+                  `flex items-center gap-3 group ${isActive ? 'bg-brand-100 text-brand-500' : ''
+                  } hover:bg-${colorMode === 'light' ? 'gray-100' : 'gray-700'}`
+                }
+              >
+                <FaHome
+                  size={22}
+                  color={iconColor}
+                  className="transition-colors duration-200 group-hover:text-brand-500"
+                />
+                {/* Text label removed */}
               </NavLink>
-              <NavLink to={RoutePaths.About} onClick={toggleMenu} style={navItemBaseStyle} aria-label="About Me">
+
+              <NavLink
+                to={RoutePaths.About}
+                onClick={toggleMenu}
+                aria-label="About Me"
+                style={{
+                  ...navItemBaseStyle,
+                  width: '100%',
+                  padding: '0.75rem',
+                  borderRadius: '0.5rem',
+                  transition: 'all 0.2s ease-in-out',
+                }}
+                className={({ isActive }) =>
+                  `flex items-center gap-3 ${isActive ? 'bg-brand-100 text-brand-500' : ''
+                  } hover:bg-${colorMode === 'light' ? 'gray-100' : 'gray-700'}`
+                }
+              >
                 <FaUser size={20} color={iconColor} />
+                {/* Text label removed */}
               </NavLink>
-              <NavLink to={RoutePaths.Projects} onClick={toggleMenu} style={navItemBaseStyle} aria-label="Projects">
+              <NavLink
+                to={RoutePaths.Projects}
+                onClick={toggleMenu}
+                aria-label="Projects"
+                style={{
+                  ...navItemBaseStyle,
+                  width: '100%',
+                  padding: '0.75rem',
+                  borderRadius: '0.5rem',
+                  transition: 'all 0.2s ease-in-out',
+                }}
+                className={({ isActive }) =>
+                  `flex items-center gap-3 ${isActive ? 'bg-brand-100 text-brand-500' : ''
+                  } hover:bg-${colorMode === 'light' ? 'gray-100' : 'gray-700'}`
+                }
+              >
                 <FaCode size={20} color={iconColor} />
+                {/* Text label removed */}
               </NavLink>
-              <NavLink to={RoutePaths.Contact} onClick={toggleMenu} style={navItemBaseStyle} aria-label="Contact">
+              <NavLink
+                to={RoutePaths.Contact}
+                onClick={toggleMenu}
+                aria-label="Contact"
+                style={{
+                  ...navItemBaseStyle,
+                  width: '100%',
+                  padding: '0.75rem',
+                  borderRadius: '0.5rem',
+                  transition: 'all 0.2s ease-in-out',
+                }}
+                className={({ isActive }) =>
+                  `flex items-center gap-3 ${isActive ? 'bg-brand-100 text-brand-500' : ''
+                  } hover:bg-${colorMode === 'light' ? 'gray-100' : 'gray-700'}`
+                }
+              >
                 <FaEnvelope size={20} color={iconColor} />
+                {/* Text label removed */}
               </NavLink>
+
+
               <LanguageSwitch />
               <IconButton
                 aria-label={`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`}
