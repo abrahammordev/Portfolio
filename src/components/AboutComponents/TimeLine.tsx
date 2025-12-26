@@ -14,13 +14,12 @@ import {
 } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 import {
-  FaPlane,
-  FaCode,
   FaSearch,
-  FaTshirt,
-  FaUserGraduate,
-  FaTasks,
-  FaDatabase,
+  FaGraduationCap,
+  FaBrain,
+  FaCheckDouble,
+  FaLink,
+  FaLaptopCode
 } from "react-icons/fa";
 import Ilias from "./../../assets/IliasLogo.webp";
 import { useTranslation } from "react-i18next";
@@ -39,56 +38,52 @@ const TimeLine: React.FC = () => {
 
   const timelineItems = [
     {
+      icon: FaBrain,
+      title: "OpoFlash",
+      date: t("TimeLineDateOpo"),
+      description: t("TimeLineDescOpo"),
+      button: true,
+      link: "https://app.opo-flash.com",
+      tag: "Current"
+    },
+    {
+      icon: FaCheckDouble,
+      title: "CheckeApp",
+      date: t("TimeLineDateChecke"),
+      description: t("TimeLineDescChecke"),
+      button: true,
+      link: "https://checkeapp.com",
+    },
+    {
       icon: Ilias,
       isImage: true,
-      title: t("TimeLineProject6"),
-      date: t("TimeLineDate6"),
-      description: t("TimeLineProject6Description"),
+      title: "STACKForILIAS",
+      date: t("TimeLineDateStack"),
+      description: t("TimeLineDescStack"),
+      button: true,
+      link: "https://github.com/surlabs/STACKForILIAS",
+    },
+    {
+      icon: FaLink,
+      title: "QaRdrobe Traceability",
+      date: t("TimeLineDateQaRdrobe"),
+      description: t("TimeLineDescQaRdrobe"),
+      button: true,
+      link: "https://github.com/abrahammordev/QaRdrobe-Traceability.git",
+    },
+    {
+      icon: FaLaptopCode,
+      title: "Personal Portfolio",
+      date: "Jan 2025",
+      description: t("TimeLineDescPortfolio"),
       button: false,
     },
     {
-      icon: FaDatabase,
-      title: t("TimeLineProject5"),
-      date: t("TimeLineDate5"),
-      description: t("TimeLineProject5Description"),
+      icon: FaGraduationCap,
+      title: t("AcademicGrade"),
+      date: "2023 - 2025",
+      description: t("AcademicLocation"),
       button: false,
-    },
-    {
-      icon: FaUserGraduate,
-      title: t("TimeLineIntro"),
-      date: t("TimeLineDate"),
-      description: t("TimeLineIntroDescription"),
-      button: false,
-    },
-    {
-      icon: FaTasks,
-      title: t("TimeLineProject4"),
-      date: t("TimeLineDate4"),
-      description: t("TimeLineProject4Description"),
-      button: true,
-      link: "https://todo-list-nine-taupe.vercel.app/",
-    },
-    {
-      icon: FaCode,
-      title: t("TimeLineProject1"),
-      date: t("TimeLineDate1"),
-      description: t("TimeLineProject1Description"),
-      button: true,
-      link: "https://color-ease.vercel.app/",
-    },
-    {
-      icon: FaTshirt,
-      title: t("TimeLineProject3"),
-      date: t("TimeLineDate3"),
-      description: t("TimeLineProject3Description"),
-      button: true,
-      link: "https://www.qardrobe.com",
-    },
-    {
-      icon: FaPlane,
-      title: t("TimeLineProject2"),
-      date: t("TimeLineDate2"),
-      description: t("TimeLineProject2Description"),
     },
   ];
 
@@ -116,7 +111,7 @@ const TimeLine: React.FC = () => {
           mb={10}
           textAlign="center"
         >
-          {t("TimeLineTitle") || "My Journey"}
+          {t("TimeLineTitle") || "Experience & Projects"}
         </Text>
         <VStack
           spacing={8}
@@ -145,35 +140,36 @@ const TimeLine: React.FC = () => {
                 justifyContent="center"
                 border="4px solid"
                 borderColor={useColorModeValue("white", "gray.800")}
+                flexShrink={0}
               >
                 {item.isImage ? (
-                  <Image src={item.icon} alt="Ilias" boxSize="16px" objectFit="contain" />
+                  <Image src={item.icon} alt="icon" boxSize="24px" objectFit="contain" />
                 ) : (
-                  <Icon as={item.icon as IconType} boxSize={4} />
+                  <Icon as={item.icon as IconType} boxSize={5} />
                 )}
               </Circle>
 
               <Box flex="1" pt={1}>
-                <Flex align="center" mb={1}>
-                  <Text fontSize="lg" fontWeight="semibold" color={titleColor} mr={3}>
+                <Flex align="center" mb={1} wrap="wrap" gap={2}>
+                  <Text fontSize="lg" fontWeight="semibold" color={titleColor}>
                     {item.title}
                   </Text>
-                  {item.button && (
+                  {item.tag && (
                     <Text
                       fontSize="xs"
-                      fontWeight="medium"
+                      fontWeight="bold"
                       px={2}
                       py={0.5}
-                      rounded="md"
+                      rounded="full"
                       bg={buttonBgColor}
-                      color={iconColor}
+                      color="white"
                     >
-                      Latest
+                      {item.tag}
                     </Text>
                   )}
                 </Flex>
                 <time
-                  className="block mb-2 text-sm font-normal leading-none"
+                  className="block mb-2 text-sm font-medium"
                   style={{ color: dateColor }}
                 >
                   {item.date}
@@ -192,10 +188,10 @@ const TimeLine: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     size="sm"
-                    leftIcon={<Icon as={FaSearch} />}
+                    rightIcon={<Icon as={FaSearch} />}
                     bg={iconBgColor}
                     color={iconColor}
-                    _hover={{ bg: buttonBgColor, transform: 'translateY(-2px)', boxShadow: 'lg' }}
+                    _hover={{ bg: buttonBgColor, color: "white", transform: 'translateY(-2px)', boxShadow: 'lg' }}
                     mt={2}
                   >
                     {t("TimeLineProjectButton")}

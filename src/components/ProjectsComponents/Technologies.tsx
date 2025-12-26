@@ -1,68 +1,85 @@
 import { Heading, Box, useColorModeValue, Flex, Text, Stack } from "@chakra-ui/react";
 import {
-    FaJava,
     FaPython,
     FaJs,
     FaDocker,
     FaGitAlt,
     FaGithub,
-    FaDatabase,
-    FaHtml5,
-    FaCss3Alt,
     FaAws,
     FaPhp,
-    
+    FaLinux,
+    FaJava
 } from "react-icons/fa";
-import { SiDjango, SiReact, SiMysql, SiTailwindcss, SiScrumalliance, SiTypescript, SiChakraui, SiFirebase, SiGrafana, SiFigma, SiTrello } from "react-icons/si";
+import { 
+    SiReact, 
+    SiMysql, 
+    SiTailwindcss, 
+    SiTypescript, 
+    SiChakraui, 
+    SiPostgresql, 
+    SiNextdotjs, 
+    SiNodedotjs, 
+    SiPrisma, 
+    SiSolana, 
+    SiOpenai,
+    SiNginx,
+    SiDjango,
+    SiJest,
+    SiFirebase,
+    SiVite,
+    SiSolidity
+} from "react-icons/si";
 
 const TechnologiesSection = () => {
     const technologyGroups = [
         {
             category: "Languages",
             items: [
-                { icon: <FaJava size="2.5rem" /> },
-                { icon: <FaPython size="2.5rem" /> },
-                { icon: <FaJs size="2.5rem" /> },
-                { icon: <SiTypescript size="2.5rem" /> },
-                { icon: <FaPhp size="2.5rem" /> }
-
+                { icon: <SiTypescript size="2.5rem" />, name: "TypeScript" },
+                { icon: <FaJs size="2.5rem" />, name: "JavaScript" },
+                { icon: <FaPython size="2.5rem" />, name: "Python" },
+                { icon: <FaJava size="2.5rem" />, name: "Java" },
+                { icon: <FaPhp size="2.5rem" />, name: "PHP" },
+                { icon: <SiSolidity size="2.5rem" />, name: "Solidity" }
             ]
         },
         {
             category: "Frontend",
             items: [
-                { icon: <SiReact size="2.5rem" /> },
-                { icon: <FaHtml5 size="2.5rem" /> },
-                { icon: <FaCss3Alt size="2.5rem" /> },
-                { icon: <SiTailwindcss size="2.5rem" /> },
-                { icon: <SiChakraui size="2.5rem" /> }
+                { icon: <SiReact size="2.5rem" />, name: "React" },
+                { icon: <SiNextdotjs size="2.5rem" />, name: "Next.js" },
+                { icon: <SiVite size="2.5rem" />, name: "Vite" },
+                { icon: <SiTailwindcss size="2.5rem" />, name: "Tailwind" },
+                { icon: <SiChakraui size="2.5rem" />, name: "Chakra UI" }
             ]
         },
         {
             category: "Backend",
             items: [
-                { icon: <SiDjango size="2.5rem" /> },
-                { icon: <FaDatabase size="2.5rem" /> },
-                { icon: <SiMysql size="2.5rem" /> },
-                { icon: <SiFirebase size="2.5rem" /> }
+                { icon: <SiNodedotjs size="2.5rem" />, name: "Node.js" },
+                { icon: <SiDjango size="2.5rem" />, name: "Django" },
+                { icon: <SiPrisma size="2.5rem" />, name: "Prisma" },
+                { icon: <SiPostgresql size="2.5rem" />, name: "PostgreSQL" },
+                { icon: <SiMysql size="2.5rem" />, name: "MySQL" },
+                { icon: <SiFirebase size="2.5rem" />, name: "Firebase" }
             ]
         },
         {
-            category: "DevOps",
+            category: "Testing & AI",
             items: [
-                { icon: <FaDocker size="2.5rem" /> },
-                { icon: <FaAws size="2.5rem" /> },
-                { icon: <SiGrafana size="2.5rem" /> },
+                { icon: <SiJest size="2.5rem" />, name: "Jest" },
+                { icon: <SiOpenai size="2.5rem" />, name: "OpenAI API" },
+                { icon: <SiSolana size="2.5rem" />, name: "Solana" }
             ]
         },
         {
-            category: "Tools",
+            category: "DevOps & Tools",
             items: [
-                { icon: <FaGitAlt size="2.5rem" /> },
-                { icon: <FaGithub size="2.5rem" /> },
-                { icon: <SiScrumalliance size="2.5rem" /> },
-                { icon: <SiFigma size="2.5rem" /> },
-                { icon: <SiTrello size="2.5rem" /> }
+                { icon: <FaDocker size="2.5rem" />, name: "Docker" },
+                { icon: <SiNginx size="2.5rem" />, name: "Nginx" },
+                { icon: <FaAws size="2.5rem" />, name: "AWS" },
+                { icon: <FaGitAlt size="2.5rem" />, name: "Git" },
+                { icon: <FaLinux size="2.5rem" />, name: "Linux" }
             ]
         }
     ];
@@ -84,12 +101,12 @@ const TechnologiesSection = () => {
 
             <Flex
                 direction={{ base: "column", md: "row" }}
-                justify={{ base: "center", md: "space-between" }}
+                justify="center"
                 gap={6}
-                maxW="1200px"
+                maxW="1400px"
                 mx="auto"
                 px={4}
-                textAlign={{ base: "center", md: "center" }}
+                flexWrap="wrap"
             >
                 {technologyGroups.map((group, index) => (
                     <Stack
@@ -100,7 +117,8 @@ const TechnologiesSection = () => {
                         bg={columnBg}
                         borderRadius="2xl"
                         boxShadow="lg"
-                        minW={{ base: "100%", md: "200px" }}
+                        minW={{ base: "100%", md: "220px" }}
+                        flex={1}
                     >
                         <Text
                             fontSize="xl"
@@ -108,22 +126,21 @@ const TechnologiesSection = () => {
                             color={categoryColor}
                             textTransform="uppercase"
                             letterSpacing="wide"
+                            textAlign="center"
                         >
                             {group.category}
                         </Text>
 
-                        <Stack
-                            direction={{ base: "row", sm: "column" }}
-                            spacing={6}
-                            width="100%"
-                            flexWrap="wrap"
-                            justifyContent="center"
-                            alignItems="center"
+                        <Flex
+                            wrap="wrap"
+                            gap={6}
+                            justify="center"
+                            align="center"
                         >
                             {group.items.map((tech, techIndex) => (
                                 <Box
                                     key={techIndex}
-                                    p={4}
+                                    p={2}
                                     borderRadius="lg"
                                     transition="all 0.3s"
                                     _hover={{
@@ -131,11 +148,12 @@ const TechnologiesSection = () => {
                                         color: "brand.300",
                                         cursor: "default"
                                     }}
+                                    title={tech.name}
                                 >
                                     {tech.icon}
                                 </Box>
                             ))}
-                        </Stack>
+                        </Flex>
                     </Stack>
                 ))}
             </Flex>

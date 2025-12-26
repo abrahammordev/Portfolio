@@ -1,7 +1,7 @@
-import { Box, Image, Text, VStack, HStack, Tag, Button, Link, useColorModeValue, Icon } from "@chakra-ui/react";
+import { Box, Image, Text, VStack, HStack, Tag, Button, Link, useColorModeValue, Icon, Spacer } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 interface ProjectCardProps {
     title: string;
@@ -16,106 +16,99 @@ const MotionBox = motion(Box);
 
 const ProjectCard = ({ title, description, technologies, imageUrl, projectUrl, githubUrl }: ProjectCardProps) => {
     const { t } = useTranslation();
+    
+    const cardBg = useColorModeValue("white", "gray.800");
+    const titleColor = useColorModeValue("brand.600", "brand.100");
+    const descColor = useColorModeValue("gray.600", "gray.400");
 
     return (
         <MotionBox
             borderWidth="1px"
             borderRadius="2xl"
             overflow="hidden"
-            p={6}
-            bg={useColorModeValue("white", "gray.800")}
+            bg={cardBg}
             boxShadow="lg"
-            transition="all 0.3s"
-            _hover={{
-                boxShadow: "2xl",
-                transform: "scale(1.03)",
-            }}
-            maxW={{ base: "100%", sm: "500px" }}
-            mx="auto"
-            whileHover={{ scale: 1.05 }}
-            flexDirection={"column"}
+            whileHover={{ y: -8, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+            transition={{ duration: 0.3 }}
             display="flex"
-            justifyContent="space-between"
+            flexDirection="column"
+            h="100%"
         >
             {imageUrl && (
-                <Image
-                    src={imageUrl}
-                    alt={title}
-                    borderRadius="xl"
-                    mb={5}
-                    objectFit="cover"
-                    h="200px"
-                    w="100%"
-                    loading="lazy" 
-                />
+                <Box overflow="hidden" h="220px">
+                    <Image
+                        src={imageUrl}
+                        alt={title}
+                        objectFit="cover"
+                        h="100%"
+                        w="100%"
+                        transition="transform 0.5s ease"
+                        _hover={{ transform: "scale(1.1)" }}
+                        loading="lazy"
+                    />
+                </Box>
             )}
 
-            <VStack align="start" spacing={4}>
-                <Text fontSize="2xl" fontWeight="bold" color="brand.200">
+            <VStack align="start" spacing={4} p={6} flex={1}>
+                <Text fontSize="2xl" fontWeight="bold" color={titleColor} lineHeight="tight">
                     {title}
                 </Text>
 
-                <Text color={useColorModeValue("gray.600", "gray.300")} fontSize="md">
+                <Text color={descColor} fontSize="sm" noOfLines={4}>
                     {description}
                 </Text>
 
-                <HStack spacing={3} wrap="wrap">
+                <Spacer />
+
+                <HStack spacing={2} wrap="wrap" pt={2}>
                     {technologies.map((tech, index) => (
                         <Tag
                             key={index}
-                            colorScheme="blue"
+                            size="sm"
+                            borderRadius="full"
                             variant="subtle"
-                            fontSize="sm"
+                            colorScheme="cyan"
                             px={3}
-                            py={2}
-                            display="flex"
-                            alignItems="center"
-                            textAlign={"center"}
-                            gap={2}
                         >
-                            {tech.icon} {tech.name}
+                            <Box as="span" mr={1}>{tech.icon}</Box>
+                            {tech.name}
                         </Tag>
                     ))}
                 </HStack>
             </VStack>
-            <HStack spacing={4} mt={6} width="full" justify="center">
+
+            <HStack spacing={3} p={6} pt={0} width="full">
                 {githubUrl && (
-                    <Link href={githubUrl} isExternal _hover={{ textDecoration: "none" }} flex={1}>
-                        <Button
-                            colorScheme="gray"
-                            variant="outline"
-                            size="md"
-                            width="full"
-                            leftIcon={<Icon as={FaGithub} />}
-                            _hover={{
-                                bg: useColorModeValue("gray.200", "gray.700"),
-                                transform: "translateY(-2px)",
-                                boxShadow: "lg",
-                            }}
-                        >
-                            GitHub
-                        </Button>
-                    </Link>
+                    <Button
+                        as={Link}
+                        href={githubUrl}
+                        isExternal
+                        variant="outline"
+                        size="sm"
+                        flex={1}
+                        leftIcon={<Icon as={FaGithub} />}
+                        colorScheme="gray"
+                        _hover={{ textDecoration: "none", bg: useColorModeValue("gray.100", "gray.700") }}
+                    >
+                        Code
+                    </Button>
                 )}
-                {projectUrl && projectUrl !== githubUrl && (
-                    <Link href={projectUrl} isExternal _hover={{ textDecoration: "none" }} flex={1}>
-                        <Button
-                            colorScheme="blue"
-                            variant="solid"
-                            size="md"
-                            width="full"
-                            _hover={{
-                                bg: "blue.600",
-                                transform: "translateY(-2px)",
-                                boxShadow: "lg",
-                            }}
-                        >
-                            {t('ProjectButton')}
-                        </Button>
-                    </Link>
+                {projectUrl && projectUrl !== "#" && (
+                    <Button
+                        as={Link}
+                        href={projectUrl}
+                        isExternal
+                        variant="solid"
+                        size="sm"
+                        flex={1}
+                        rightIcon={<Icon as={FaExternalLinkAlt} />}
+                        bg="brand.500"
+                        color="white"
+                        _hover={{ textDecoration: "none", bg: "brand.600" }}
+                    >
+                        {t('ProjectButton')}
+                    </Button>
                 )}
-
-
             </HStack>
         </MotionBox>
     );
