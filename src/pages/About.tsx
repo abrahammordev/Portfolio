@@ -1,12 +1,13 @@
+import { Box } from "@chakra-ui/react";
 import IntroSection from "../components/AboutComponents/Intro/IntroSection";
 import TimeLine from "../components/AboutComponents/TimeLine";
 
 const About: React.FC = () => {
   return (
-    <div style={{ paddingBottom: "120px" }}>
+    <Box id="about" style={{ paddingBottom: "120px" }}>
       <IntroSection />
       <TimeLine />
-    </div>
+    </Box>
   );
 };
 
