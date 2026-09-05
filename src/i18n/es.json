@@ -1,58 +1,289 @@
 {
-  "Home": "Inicio",
-  "About": "Sobre nosotros",
-  "Contact": "Contacto",
-  "Intro": "Soy Abraham, un apasionado desarrollador de software.",
-  "Welcome": "¡Bienvenido a mi portfolio web! Aquí podrás explorar mis proyectos más recientes y contactarme para propuestas de colaboración o trabajos.",
-  "ContactInfo": "Información de contacto",
-  "ContactHeader": "Formulario de contacto",
-  "ContactPhone": "Teléfono",
-  "ContactAddress": "Dirección",
-  "ContactIntro": "Nombre",
-  "ContactMail": "E-mail",
-  "ContactCTA": "Me pondré en contacto contigo pronto",
-  "ContactMessage": "Mensaje",
-  "ContactSendMessage": "Enviar mensaje",
-  "ContactGreeting": "Gracias por contactarme, ¡te escribiré lo antes posible!.",
-  "TimeLineTitle": "Experiencia y Trayectoria",
-  "TimeLineDateOpo": "Marzo 2025 - Actualidad",
-  "TimeLineDescOpo": "Desarrollando OpoFlash, una plataforma EdTech integral. Arquitectura de microservicios con Next.js, Python (algoritmo FSRS) y Docker para optimizar el estudio.",
-  "TimeLineDateChecke": "Febrero 2025",
-  "TimeLineDescChecke": "Ingeniería de CheckeApp, una plataforma de verificación de hechos en tiempo real. Implementación de un flujo asíncrono de 4 pasos: generación de preguntas, búsqueda de fuentes, validación humana y generación de informes finales con IA mediante oRPC y Next.js.",
-  "TimeLineDateStack": "Enero 2025",
-  "TimeLineDescStack": "Contribución a la comunidad Open Source manteniendo y mejorando el plugin PHP STACKForILIAS, potenciando las evaluaciones matemáticas en entornos LMS.",
-  "TimeLineDateQaRdrobe": "Diciembre 2024",
-  "TimeLineDescQaRdrobe": "Solución full-stack para el cumplimiento del Pasaporte Digital de Productos (DPP) de la UE en la industria de la moda, impulsada por la blockchain de Polygon y Supabase.",
-  "TimeLineDescPortfolio": "Diseño y desarrollo de este portfolio utilizando React, Vite y Chakra UI, con foco en rendimiento, accesibilidad y diseño moderno.",
-  "TimeLineProjectButton": "Ver Proyecto",
-  "ProjectHeader": "Proyectos Destacados",
-  "ProjectOpoFlashDesc": "Plataforma EdTech Full Stack para oposiciones. Integra tests adaptativos y un microservicio de Repaso Espaciado (FSRS) en Python, orquestado con Docker y Nginx.",
-  "ProjectCheckeAppDesc": "Plataforma de verificación impulsada por IA que combate la desinformación mediante un proceso transparente de varios pasos. Orquesta el análisis de texto, búsqueda automatizada de fuentes y validación humana para generar informes fundamentados, gestionado con una arquitectura de sondeo asíncrono con oRPC y MySQL.",
-  "ProjectStackDesc": "Contribución Open Source para el LMS ILIAS. Desarrollo de soluciones en PHP para el plugin STACKForILIAS, mejorando la interoperabilidad de herramientas de evaluación matemática.",
-  "ProjectQaRdrobeDesc": "Plataforma integral para Pasaportes Digitales de Productos (DPP) asegurando el cumplimiento de la UE. Utiliza la blockchain de Polygon para trazabilidad y Supabase para gestión segura de datos.",
-  "ProjectPortfolioDesc": "Portfolio personal moderno construido con React, Vite y Chakra UI. Cuenta con internacionalización (i18n), modo oscuro automático mediante tokens semánticos y diseño responsivo.",
-  "Project1Title": "Web Portfolio",
-  "Project1Description": "Proyecto creado para mostrar habilidades técnicas así como tenologías conocidas y proyectos en los que he trabajado.",
-  "Project2Title": "Color Ease",
-  "Project2Description": "Proyecto creado para ayudar a los diseñadores a encontrar combinaciones de colores para sus proyectos.",
-  "Project3Title": "Airport Manager",
-  "Project3Description": "Una robusta aplicación de escritorio para gestionar las operaciones aeroportuarias, incluyendo la programación de vuelos y la asignación de puertas. Desarrollada con Java (Swing/JDBC) y MySQL, con una interfaz gráfica limpia e integración segura con base de datos.",
-  "Project4Title": "QaRdrobe",
-  "Project4Description": "Una solución integral para el cumplimiento del Pasaporte Digital de Productos (DPP) de la UE, garantizando la trazabilidad y transparencia del ciclo de vida de los productos textiles mediante blockchain y Supabase.",
-  "Project5Title": "ToDo List",
-  "Project5Description": "Una elegante aplicación de gestión de tareas con sincronización en tiempo real. Construida con React y Firebase, incluye autenticación segura y almacenamiento persistente en la nube.",
-  "Project6Title": "Traceability smart contract",
-  "Project6Description": "Smart Contract en Solidity desplegado en Polygon (Amoy) para registrar de forma inmutable los datos de las prendas, garantizando la veracidad de los pasaportes de productos.",
-  "ProjectButton": "¡Visítalo!",
-  "ProjectVisit": "¡Ver proyecto!",
-  "HeroSlogan": " Si lo puedes imaginar, lo puedes programar",
-  "HeroName": "Abraham Morales Rodríguez",
-  "HeroTitle": "Desarrollador Full Stack apasionado por crear soluciones innovadoras y escalables. ¡Bienvenido a mi portfolio!",
-  "HeroDownload": "Descargar CV",
-  "HeroStart": "¡Vamos a empezar!",
-  "AcademicTitle": " Información Académica",
-  "AcademicGrade": "Técnico superior en Desarrollo de Aplicaciones Web",
-  "AcademicLocation": "Ies Hermanos Machado",
-  "AcademicIdiom": "C1 Advanced Cambridge",
-  "AcademicCourses": "Cursos Relevantes"
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "menu": "Menú",
+    "closeMenu": "Cerrar menú",
+    "theme": "Cambiar tema",
+    "language": "Cambiar idioma"
+  },
+  "common": {
+    "downloadCv": "Descargar CV",
+    "viewProjects": "Ver proyectos",
+    "viewAll": "Ver todos los proyectos",
+    "getInTouch": "Hablemos",
+    "readMore": "Detalles",
+    "close": "Cerrar",
+    "liveSite": "Ver en vivo",
+    "sourceCode": "Código fuente",
+    "loading": "Cargando",
+    "available": "Disponible para conectar",
+    "backHome": "Volver al inicio"
+  },
+  "hero": {
+    "eyebrow": "Sevilla, España",
+    "roles": [
+      "DevOps y sistemas e-learning",
+      "Desarrollador full stack",
+      "Integraciones RAG y LLM",
+      "Especialista en e-learning",
+      "Desarrollo de plugins ILIAS y Moodle"
+    ],
+    "lead": "Desarrollador full-stack con experiencia en entornos de producción, diseño de pipelines CI/CD, despliegues en contenedores y arquitectura de microservicios. He liderado la integración técnica de un sistema RAG con Moodle y soy technical lead de un módulo core del LMS open source ILIAS.",
+    "currentlyAt": "Actualmente en"
+  },
+  "stats": {
+    "backlog": "del backlog del módulo Survey resuelto tras asumirlo",
+    "accuracy": "de precisión en los informes verificados de Checkeapp",
+    "environments": "de reducción en las incidencias reportadas tras crear un protocolo de releases",
+    "lms": "ecosistemas LMS en producción: ILIAS y Moodle"
+  },
+  "now": {
+    "title": "En lo que trabajo ahora",
+    "subtitle": "Las cinco cosas que ocupan la mayor parte de mi semana.",
+    "survey": {
+      "title": "Technical lead — Survey para ILIAS",
+      "desc": "Responsable de la evolución técnica de un módulo core del LMS open source: prioridades, incidencias y requisitos coordinados directamente con las instituciones que lo usan."
+    },
+    "rag": {
+      "title": "RAG dentro del LMS",
+      "desc": "SURContext nació en ILIAS y hoy corre en los dos ecosistemas. Yo llevo la parte de Moodle: los plugins que llevan el contenido de los cursos al pipeline de recuperación sin pasos manuales."
+    },
+    "release": {
+      "title": "Ingeniería de releases",
+      "desc": "Un protocolo de control de versiones y publicación sobre GitHub Actions, con entornos separados de desarrollo, pruebas y producción."
+    },
+    "load": {
+      "title": "Pruebas de carga sobre RAG",
+      "desc": "Auditando capacidad y concurrencia con Locust y traduciendo los resultados en decisiones de infraestructura para cada cliente."
+    },
+    "opoflash": {
+      "title": "Construyendo OpoFlash",
+      "desc": "Una plataforma de estudio adaptativa que genera flashcards a partir del material del propio alumno y programa los repasos con un motor FSRS-5."
+    }
+  },
+  "skills": {
+    "title": "Stack técnico",
+    "subtitle": "Lo que uso a diario, agrupado por su lugar en el sistema.",
+    "groups": {
+      "devops": "Linux, DevOps y cloud",
+      "lms": "LMS y e-learning",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Bases de datos",
+      "testing": "Testing y herramientas"
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "kicker": "Desarrollador de software · DevOps y sistemas e-learning",
+    "p1": "Soy desarrollador de software y vivo en Sevilla. Trabajo en Surlabs, donde mi semana se reparte entre DevOps —Docker, servidores Linux, pipelines CI/CD— y sistemas e-learning construidos sobre Moodle e ILIAS.",
+    "p2": "Casi todo lo que hago vive en la costura entre dos sistemas: conectar un pipeline RAG con un LMS, montar un proceso de releases sobre tres entornos, conseguir que un módulo PHP dentro de un código open source con muchos años de historia se comporte de forma predecible. Esa es la parte que me gusta.",
+    "p3": "Al margen de eso desarrollo OpoFlash, una plataforma de estudio adaptativa que convierte el material del propio alumno en flashcards y programa cada repaso con un motor de repetición espaciada FSRS-5.",
+    "experienceTitle": "Experiencia",
+    "educationTitle": "Formación",
+    "currentBadge": "Actual"
+  },
+  "experience": {
+    "surlabsDevops": {
+      "role": "Desarrollador de software · DevOps y especialista en e-learning",
+      "period": "Ene 2025 — Actualidad",
+      "summary": "DevOps y responsabilidad técnica sobre las plataformas e-learning de la empresa.",
+      "b1": "Lideré la integración técnica de Moodle con SURContext, el sistema de Retrieval-Augmented Generation de Surlabs, desarrollando los plugins de Moodle que conectan el LMS directamente con el pipeline RAG de principio a fin.",
+      "b2": "Technical lead de Survey (PHP), módulo core del LMS open source ILIAS: responsable de su evolución técnica, definiendo prioridades, gestionando incidencias y coordinando requisitos con clientes. Resolví el 40% del backlog acumulado.",
+      "b3": "Diseñé e implementé un protocolo de control de versiones basado en GitHub Actions y releases, definiendo un flujo CI/CD con entornos separados de desarrollo, pruebas y producción. Se redujeron las incidencias de despliegue y las publicaciones pasaron a ser predecibles.",
+      "b4": "Desarrollé nuevas funcionalidades, implementé mejoras y resolví incidencias en plugins propios y open source para las plataformas LMS Moodle e ILIAS, gestionando el ciclo de vida completo del ticket técnico.",
+      "b5": "Audité y construí pruebas de carga con Locust sobre un sistema RAG para evaluar capacidad y concurrencia, identificando puntos de mejora y orientando las decisiones de infraestructura de cada cliente."
+    },
+    "surlabsDev": {
+      "role": "Desarrollador full stack",
+      "period": "2025",
+      "summary": "Producto sobre plataformas de IA y herramientas internas, de principio a fin.",
+      "b1": "Desarrollé Checkeapp (TypeScript, Next.js, React), una plataforma de verificación en tiempo real que usa Retrieval-Augmented Generation para consultar fuentes web en vivo y generar informes verificables con referencias, alcanzando un 95% de precisión. Entregado bajo ILENIA y ALIA, la iniciativa pública de IA del Gobierno de España, en colaboración con la Universidad del País Vasco.",
+      "b2": "Construí una plataforma interna de gestión empresarial con Express y APIs REST, integrando PostgreSQL para la gestión de datos. La plataforma se centró en la integración de servicios y la automatización de procesos, mejorando en un 30% el tiempo dedicado a gestionar tareas."
+    },
+    "opoflash": {
+      "role": "Fundador y desarrollador — OpoFlash",
+      "period": "Jun 2024 — Actualidad",
+      "summary": "Producto propio: plataforma de estudio adaptativo para oposiciones.",
+      "b1": "Diseñé y construí un sistema e-learning basado en microservicios integrado con un sistema RAG propio que analiza el contenido subido por el alumno y genera automáticamente flashcards y resúmenes contextualizados.",
+      "b2": "Implementé un motor de repetición espaciada en Python (FSRS-5) que adapta los intervalos de repaso al rendimiento de cada alumno, optimizando la retención a largo plazo frente a la curva del olvido."
+    }
+  },
+  "education": {
+    "daw": {
+      "title": "Técnico Superior en Informática — Desarrollo de Aplicaciones Web",
+      "place": "IES Hermanos Machado, Sevilla",
+      "period": "2023 — 2025"
+    },
+    "cae": {
+      "title": "Cambridge English: C1 Advanced (CAE)",
+      "place": "Cambridge Assessment English",
+      "period": "2025"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Sistemas en producción, trabajo open source y cosas que construí para aprender.",
+    "featuredTitle": "Trabajo destacado",
+    "featuredSubtitle": "Cuatro proyectos que muestran en qué dedico realmente el tiempo.",
+    "empty": "Todavía no hay proyectos en esta categoría.",
+    "overview": "Resumen",
+    "gallery": "Galería",
+    "galleryImageAlt": "Captura de {{project}}, imagen {{index}}",
+    "highlights": "Puntos clave",
+    "stack": "Stack",
+    "categories": {
+      "all": "Todos",
+      "elearning": "E-learning",
+      "ai": "IA y RAG",
+      "opensource": "Open source",
+      "web": "Web",
+      "blockchain": "Blockchain"
+    },
+    "status": {
+      "live": "En producción",
+      "maintained": "En mantenimiento",
+      "archived": "Archivado"
+    },
+    "context": {
+      "surlabs": "Desarrollado en Surlabs",
+      "ilenia": "Desarrollado en Surlabs bajo ILENIA y ALIA, la iniciativa pública de IA del Gobierno de España, con la Universidad del País Vasco"
+    },
+    "links": {
+      "surlabs": "Surlabs en GitHub"
+    },
+    "items": {
+      "opoflash": {
+        "tagline": "Plataforma de e-learning adaptativo para oposiciones",
+        "description": "OpoFlash convierte el material de estudio del propio alumno en un plan de repaso adaptativo. El contenido subido lo analiza un pipeline RAG propio que genera flashcards y resúmenes, mientras un servicio en Python basado en FSRS-5 programa cada repaso contra la curva del olvido. Los servicios corren de forma independiente detrás de Nginx, orquestados con Docker Compose.",
+        "highlights": [
+          "Pipeline RAG propio que lee el material subido por el alumno y genera flashcards y resúmenes contextualizados",
+          "Motor de repetición espaciada escrito en Python con FSRS-5, adaptando los intervalos al rendimiento de cada alumno",
+          "Microservicios separados por responsabilidad, contenerizados con Docker Compose y servidos a través de Nginx",
+          "Diseñado, construido y operado de principio a fin: del esquema de base de datos al despliegue"
+        ]
+      },
+      "surcontext": {
+        "tagline": "Plataforma RAG para los LMS ILIAS y Moodle",
+        "description": "SURContext es la plataforma de Retrieval-Augmented Generation de Surlabs. Nació dentro de ILIAS y hoy da servicio a los dos ecosistemas LMS: el material del curso se ingiere, se trocea y se indexa en una base vectorial, y un pipeline de agentes responde a alumnos y profesores a partir de ese material en lugar de lo que el modelo ya sabía. Lideré la parte de Moodle de principio a fin —los plugins que conectan el LMS directamente con el pipeline— y audité el sistema bajo carga.",
+        "highlights": [
+          "Pipeline de agentes sobre LangChain y LangGraph, con proveedores de modelo intercambiables entre OpenAI, Anthropic, Mistral y Ollama autoalojado",
+          "Ingesta documental con Unstructured y PyMuPDF —PDF, formatos Office y escaneos con OCR— y embeddings servidos por sentence-transformers",
+          "Búsqueda vectorial sobre Milvus y Qdrant; estado de conversación y checkpoints del grafo persistidos en MongoDB",
+          "Servicio FastAPI con Celery y Redis para los trabajos largos de ingesta e indexado",
+          "Nació en ILIAS; lideré la integración técnica con Moodle de principio a fin y medí los límites de capacidad y concurrencia con Locust"
+        ]
+      },
+      "checkeapp": {
+        "tagline": "Verificación en tiempo real con informes respaldados por fuentes",
+        "description": "Checkeapp contrasta afirmaciones con fuentes web en vivo y devuelve un informe donde cada afirmación es trazable hasta su origen. Construido con TypeScript, Next.js y React sobre un pipeline de Retrieval-Augmented Generation, alcanzando un 95% de precisión en evaluación.",
+        "highlights": [
+          "Pipeline RAG que consulta fuentes web en vivo para producir informes verificables y referenciados",
+          "95% de precisión alcanzado en evaluación",
+          "Flujo asíncrono en varios pasos: generación de preguntas, búsqueda de fuentes, validación y generación del informe",
+          "Entregado bajo la iniciativa pública de IA ILENIA y ALIA con la Universidad del País Vasco"
+        ]
+      },
+      "ilias-survey": {
+        "tagline": "Technical lead de un módulo core del LMS open source ILIAS",
+        "description": "Survey es uno de los módulos core de ILIAS, el LMS open source que usan universidades de toda Europa. Soy responsable de su evolución técnica: definir prioridades, gestionar incidencias, coordinar requisitos con las instituciones que lo utilizan y entregar los cambios.",
+        "highlights": [
+          "Responsabilidad técnica del módulo: hoja de ruta, prioridades y gestión de incidencias",
+          "40% del backlog acumulado resuelto tras asumir el módulo",
+          "Requisitos coordinados directamente con las instituciones cliente",
+          "Código PHP dentro del core de ILIAS, publicado mediante el flujo CI/CD del equipo"
+        ]
+      },
+      "ilias-plugins": {
+        "tagline": "Funcionalidades, correcciones y releases en el ecosistema de plugins de ILIAS",
+        "description": "Trabajo continuo sobre plugins propios y open source para ILIAS —STACK para evaluación STEM, AIChat para conversaciones con LLM dentro de la plataforma, LiveVoting para participación en tiempo real— cubriendo el ciclo de vida completo del ticket técnico, del reporte del cliente a la release.",
+        "highlights": [
+          "Nuevas funcionalidades, mejoras y corrección de incidencias en plugins propios y open source de ILIAS",
+          "Ciclo de vida técnico completo del ticket, del reporte del cliente hasta la publicación",
+          "Gestión de releases con GitHub Actions y entornos separados de desarrollo, pruebas y producción"
+        ]
+      },
+      "qardrobe": {
+        "tagline": "Cumplimiento del Pasaporte Digital de Producto de la UE para marcas de moda",
+        "description": "Plataforma full-stack que ayuda a las marcas de moda a cumplir con la regulación europea de Pasaporte Digital de Producto. Los datos del ciclo de vida de cada prenda se registran de forma inmutable en la red Polygon, con Supabase gestionando autenticación y datos de aplicación.",
+        "highlights": [
+          "Smart contract en Solidity desplegado en Polygon que registra los datos de las prendas de forma inmutable",
+          "Frontend en React y TypeScript con Supabase para autenticación y datos",
+          "Proyecto final del Técnico Superior en Desarrollo de Aplicaciones Web"
+        ]
+      },
+      "color-ease": {
+        "tagline": "Generador de paletas de color con comprobación de accesibilidad",
+        "description": "Herramienta para diseñadores y desarrolladores que permite construir paletas de color y comprobarlas contra los requisitos de contraste de WCAG antes de llevarlas a producción.",
+        "highlights": [
+          "Comprobación de contraste WCAG AA/AAA en tiempo real",
+          "Generación de paletas basada en relaciones de teoría del color",
+          "Conversión entre HEX, RGB y HSL"
+        ]
+      },
+      "todo-app": {
+        "tagline": "Gestor de tareas con sincronización en tiempo real",
+        "description": "Aplicación de gestión de tareas construida sobre Firebase, con autenticación y sincronización en tiempo real entre dispositivos.",
+        "highlights": [
+          "Sincronización en tiempo real mediante listeners de Cloud Firestore",
+          "Autenticación por email y contraseña",
+          "Interfaz responsive construida con React y TypeScript"
+        ]
+      },
+      "airport-manager": {
+        "tagline": "Gestor de operaciones aeroportuarias de escritorio",
+        "description": "Aplicación de escritorio en Java para gestionar operaciones aeroportuarias —vuelos, puertas y horarios— con interfaz Swing sobre una base de datos MySQL a través de JDBC.",
+        "highlights": [
+          "CRUD completo sobre un esquema relacional normalizado",
+          "Interfaz de escritorio en Swing con acceso a datos vía JDBC",
+          "Proyecto académico centrado en el modelado relacional"
+        ]
+      },
+      "portfolio": {
+        "tagline": "Esta web",
+        "description": "Construida con React 18, TypeScript y Vite, con estilos íntegramente sobre tokens de diseño de Tailwind CSS v4 y sin librería de componentes. Temas claro y oscuro, tres idiomas y animaciones que respetan prefers-reduced-motion.",
+        "highlights": [
+          "Sistema de diseño basado en tokens con Tailwind CSS v4, sin librería de componentes",
+          "Internacionalización completa en inglés, español y alemán con i18next",
+          "Accesible por defecto: navegación por teclado, foco visible y soporte de reduced-motion"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Hablemos",
+    "subtitle": "Siempre dispuesto a hablar de problemas interesantes. La vía más rápida es el correo.",
+    "infoTitle": "Datos de contacto",
+    "email": "Email",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "elsewhere": "En otros sitios",
+    "formTitle": "Enviar un mensaje",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "tu@empresa.com",
+    "message": "Mensaje",
+    "messagePlaceholder": "¿Qué te gustaría construir?",
+    "helper": "Suelo responder en uno o dos días.",
+    "send": "Enviar mensaje",
+    "sending": "Enviando…",
+    "successTitle": "Mensaje enviado",
+    "success": "Gracias por escribir, te respondo lo antes posible.",
+    "errorTitle": "Algo ha fallado",
+    "error": "No se ha podido enviar el mensaje. Puedes escribirme directamente por correo.",
+    "sendAnother": "Enviar otro mensaje"
+  },
+  "footer": {
+    "built": "Diseñado y desarrollado por Abraham Morales",
+    "source": "Código en GitHub",
+    "rights": "Todos los derechos reservados.",
+    "tagline": "DevOps y sistemas e-learning. Construyendo las conexiones entre plataformas LMS, pipelines RAG y la infraestructura que hay debajo."
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "desc": "Esa ruta no existe. Puede que se haya movido o que el enlace esté desactualizado."
+  }
 }

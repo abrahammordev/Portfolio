@@ -1,0 +1,289 @@
+{
+  "nav": {
+    "home": "Start",
+    "about": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "menu": "Menü",
+    "closeMenu": "Menü schließen",
+    "theme": "Design wechseln",
+    "language": "Sprache wechseln"
+  },
+  "common": {
+    "downloadCv": "Lebenslauf",
+    "viewProjects": "Projekte ansehen",
+    "viewAll": "Alle Projekte ansehen",
+    "getInTouch": "Kontakt aufnehmen",
+    "readMore": "Details",
+    "close": "Schließen",
+    "liveSite": "Live ansehen",
+    "sourceCode": "Quellcode",
+    "loading": "Lädt",
+    "available": "Gern im Austausch",
+    "backHome": "Zurück zur Startseite"
+  },
+  "hero": {
+    "eyebrow": "Sevilla, Spanien",
+    "roles": [
+      "DevOps & E-Learning-Systeme",
+      "Full-Stack-Entwickler",
+      "RAG- und LLM-Integrationen",
+      "E-Learning-Spezialist",
+      "ILIAS- und Moodle-Plugin-Entwicklung"
+    ],
+    "lead": "Full-Stack-Entwickler mit Produktionserfahrung im Design von CI/CD-Pipelines, containerisierten Deployments und Microservice-Architekturen. Ich habe die technische Integration eines RAG-Systems mit Moodle geleitet und bin Technical Lead eines Kernmoduls des Open-Source-LMS ILIAS.",
+    "currentlyAt": "Aktuell bei"
+  },
+  "stats": {
+    "backlog": "des Survey-Backlogs nach der Übernahme des Moduls abgearbeitet",
+    "accuracy": "Genauigkeit der quellenbasierten Prüfberichte von Checkeapp",
+    "environments": "weniger gemeldete Vorfälle nach Einführung eines Release-Protokolls",
+    "lms": "LMS-Ökosysteme im Produktivbetrieb: ILIAS und Moodle"
+  },
+  "now": {
+    "title": "Woran ich gerade arbeite",
+    "subtitle": "Die fünf Themen, die derzeit den Großteil meiner Woche ausmachen.",
+    "survey": {
+      "title": "Technical Lead — Survey für ILIAS",
+      "desc": "Verantwortlich für die technische Weiterentwicklung eines Kernmoduls des Open-Source-LMS: Prioritäten, Störungen und Anforderungen, direkt mit den nutzenden Institutionen abgestimmt."
+    },
+    "rag": {
+      "title": "RAG im LMS",
+      "desc": "SURContext entstand in ILIAS und läuft heute in beiden Ökosystemen. Ich verantworte die Moodle-Seite: die Plugins, die Kursinhalte ohne manuelle Schritte in die Retrieval-Pipeline bringen."
+    },
+    "release": {
+      "title": "Release Engineering",
+      "desc": "Ein Versionierungs- und Release-Protokoll auf Basis von GitHub Actions mit getrennten Umgebungen für Entwicklung, Test und Produktion."
+    },
+    "load": {
+      "title": "Lasttests für RAG-Systeme",
+      "desc": "Kapazität und Parallelität mit Locust prüfen und die Ergebnisse in Infrastrukturentscheidungen für jeden Kunden übersetzen."
+    },
+    "opoflash": {
+      "title": "Entwicklung von OpoFlash",
+      "desc": "Eine adaptive Lernplattform, die Karteikarten aus dem eigenen Material der Lernenden erzeugt und Wiederholungen mit einer FSRS-5-Engine plant."
+    }
+  },
+  "skills": {
+    "title": "Technischer Stack",
+    "subtitle": "Womit ich täglich arbeite, gruppiert nach seiner Rolle im System.",
+    "groups": {
+      "devops": "Linux, DevOps & Cloud",
+      "lms": "LMS & E-Learning",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Datenbanken",
+      "testing": "Testing & Werkzeuge"
+    }
+  },
+  "about": {
+    "title": "Über mich",
+    "kicker": "Softwareentwickler · DevOps & E-Learning-Systeme",
+    "p1": "Ich bin Softwareentwickler und lebe in Sevilla. Ich arbeite bei Surlabs, wo sich meine Woche zwischen DevOps — Docker, Linux-Server, CI/CD-Pipelines — und E-Learning-Systemen auf Basis von Moodle und ILIAS aufteilt.",
+    "p2": "Das meiste, was ich tue, liegt an der Nahtstelle zwischen zwei Systemen: eine RAG-Pipeline an ein LMS anbinden, einen Release-Prozess über drei Umgebungen aufsetzen, ein PHP-Modul in einer über Jahre gewachsenen Open-Source-Codebasis vorhersagbar machen. Genau das macht mir Spaß.",
+    "p3": "Daneben entwickle ich OpoFlash, eine adaptive Lernplattform, die das eigene Lernmaterial in Karteikarten verwandelt und jede Wiederholung mit einer FSRS-5-Engine für verteiltes Lernen plant.",
+    "experienceTitle": "Berufserfahrung",
+    "educationTitle": "Ausbildung",
+    "currentBadge": "Aktuell"
+  },
+  "experience": {
+    "surlabsDevops": {
+      "role": "Softwareentwickler · DevOps & E-Learning-Spezialist",
+      "period": "Jan. 2025 — heute",
+      "summary": "DevOps und technische Verantwortung für die E-Learning-Plattformen des Unternehmens.",
+      "b1": "Leitung der technischen Integration von Moodle mit SURContext, dem Retrieval-Augmented-Generation-System von Surlabs, inklusive Entwicklung der Moodle-Plugins, die das LMS durchgängig mit der RAG-Pipeline verbinden.",
+      "b2": "Technical Lead für Survey (PHP), ein Kernmodul des Open-Source-LMS ILIAS — verantwortlich für die technische Weiterentwicklung, Priorisierung, Störungsbearbeitung und Abstimmung der Anforderungen mit Kunden. 40 % des angesammelten Backlogs abgearbeitet.",
+      "b3": "Konzeption und Umsetzung eines Versionierungsprotokolls auf Basis von GitHub Actions und Releases, mit einem CI/CD-Prozess über getrennte Entwicklungs-, Test- und Produktionsumgebungen. Deployment-bedingte Störungen gingen zurück, Releases wurden planbar.",
+      "b4": "Entwicklung neuer Funktionen, Verbesserungen und Störungsbehebung in eigenen und Open-Source-Plugins für die LMS-Plattformen Moodle und ILIAS, inklusive des gesamten technischen Ticket-Lebenszyklus.",
+      "b5": "Audit und Aufbau von Lasttests mit Locust für ein RAG-System, um Kapazität und Parallelität zu bewerten, Verbesserungspotenziale zu erkennen und Infrastrukturentscheidungen je Kunde zu fundieren."
+    },
+    "surlabsDev": {
+      "role": "Full-Stack-Entwickler",
+      "period": "2025",
+      "summary": "Produktarbeit an KI-Plattformen und internen Werkzeugen, durchgängig.",
+      "b1": "Entwicklung von Checkeapp (TypeScript, Next.js, React), einer Echtzeit-Faktenprüfungsplattform, die mit Retrieval-Augmented Generation aktuelle Webquellen heranzieht und nachvollziehbare, belegte Berichte erzeugt — mit 95 % Genauigkeit. Umgesetzt im Rahmen von ILENIA und ALIA, der öffentlichen KI-Initiative der spanischen Regierung, in Zusammenarbeit mit der Universität des Baskenlandes.",
+      "b2": "Aufbau einer internen Plattform für die Unternehmensverwaltung mit Express und RESTful APIs sowie PostgreSQL für die Datenhaltung. Der Fokus lag auf Serviceintegration und Prozessautomatisierung; der Aufwand für die Aufgabenverwaltung sank um 30 %."
+    },
+    "opoflash": {
+      "role": "Gründer & Entwickler — OpoFlash",
+      "period": "Juni 2024 — heute",
+      "summary": "Ein eigenes Produkt: adaptive Lernplattform für spanische Staatsprüfungen.",
+      "b1": "Konzeption und Aufbau eines Microservice-basierten E-Learning-Systems mit einem eigenen RAG-System, das von Lernenden hochgeladene Inhalte analysiert und daraus automatisch kontextualisierte Karteikarten und Zusammenfassungen erzeugt.",
+      "b2": "Implementierung einer Engine für verteiltes Lernen in Python (FSRS-5), die Wiederholungsintervalle an die Leistung der Lernenden anpasst und die langfristige Behaltensleistung gegen die Vergessenskurve optimiert."
+    }
+  },
+  "education": {
+    "daw": {
+      "title": "Höherer Fachabschluss Informatik — Webanwendungsentwicklung",
+      "place": "IES Hermanos Machado, Sevilla",
+      "period": "2023 — 2025"
+    },
+    "cae": {
+      "title": "Cambridge English: C1 Advanced (CAE)",
+      "place": "Cambridge Assessment English",
+      "period": "2025"
+    }
+  },
+  "projects": {
+    "title": "Projekte",
+    "subtitle": "Systeme im Produktivbetrieb, Open-Source-Arbeit und Dinge, die ich zum Lernen gebaut habe.",
+    "featuredTitle": "Ausgewählte Arbeiten",
+    "featuredSubtitle": "Vier Projekte, die zeigen, womit ich meine Zeit tatsächlich verbringe.",
+    "empty": "In dieser Kategorie gibt es noch keine Projekte.",
+    "overview": "Überblick",
+    "gallery": "Galerie",
+    "galleryImageAlt": "Screenshot von {{project}}, Bild {{index}}",
+    "highlights": "Kernpunkte",
+    "stack": "Stack",
+    "categories": {
+      "all": "Alle",
+      "elearning": "E-Learning",
+      "ai": "KI & RAG",
+      "opensource": "Open Source",
+      "web": "Web",
+      "blockchain": "Blockchain"
+    },
+    "status": {
+      "live": "Live",
+      "maintained": "In Wartung",
+      "archived": "Archiviert"
+    },
+    "context": {
+      "surlabs": "Entwickelt bei Surlabs",
+      "ilenia": "Entwickelt bei Surlabs im Rahmen von ILENIA und ALIA, der öffentlichen KI-Initiative der spanischen Regierung, mit der Universität des Baskenlandes"
+    },
+    "links": {
+      "surlabs": "Surlabs auf GitHub"
+    },
+    "items": {
+      "opoflash": {
+        "tagline": "Adaptive E-Learning-Plattform für spanische Staatsprüfungen",
+        "description": "OpoFlash macht aus dem eigenen Lernmaterial einen adaptiven Wiederholungsplan. Hochgeladene Inhalte werden von einer eigenen RAG-Pipeline analysiert, die Karteikarten und Zusammenfassungen erzeugt, während ein Python-Dienst auf Basis von FSRS-5 jede Wiederholung gegen die Vergessenskurve plant. Die Dienste laufen unabhängig hinter Nginx, orchestriert mit Docker Compose.",
+        "highlights": [
+          "Eigene RAG-Pipeline, die hochgeladenes Lernmaterial liest und daraus kontextualisierte Karteikarten und Zusammenfassungen erzeugt",
+          "Engine für verteiltes Lernen in Python mit FSRS-5, die Intervalle an die Leistung der Lernenden anpasst",
+          "Nach Verantwortlichkeiten getrennte Microservices, containerisiert mit Docker Compose und ausgeliefert über Nginx",
+          "Durchgängig konzipiert, gebaut und betrieben — vom Datenbankschema bis zum Deployment"
+        ]
+      },
+      "surcontext": {
+        "tagline": "Retrieval-Augmented-Generation-Plattform für die LMS ILIAS und Moodle",
+        "description": "SURContext ist die RAG-Plattform von Surlabs. Sie entstand innerhalb von ILIAS und bedient heute beide LMS-Ökosysteme: Kursmaterial wird eingelesen, segmentiert und in einer Vektordatenbank indexiert, und eine Agenten-Pipeline antwortet Lernenden und Lehrenden aus diesem Material statt aus dem Vorwissen des Modells. Ich habe die Moodle-Seite durchgängig geleitet — die Plugins, die das LMS direkt an die Pipeline anbinden — und das System unter Last geprüft.",
+        "highlights": [
+          "Agenten-Pipeline auf Basis von LangChain und LangGraph, mit austauschbaren Modellanbietern: OpenAI, Anthropic, Mistral und selbst gehostetes Ollama",
+          "Dokumenteneinlesung über Unstructured und PyMuPDF — PDF, Office-Formate und OCR-Scans — mit Embeddings aus sentence-transformers",
+          "Vektorsuche über Milvus und Qdrant; Gesprächszustand und Graph-Checkpoints in MongoDB persistiert",
+          "FastAPI-Dienst mit Celery und Redis für die lang laufenden Einlese- und Indexierungsjobs",
+          "In ILIAS entstanden; ich habe die technische Integration mit Moodle durchgängig geleitet und Kapazitäts- und Parallelitätsgrenzen mit Locust gemessen"
+        ]
+      },
+      "checkeapp": {
+        "tagline": "Faktenprüfung in Echtzeit mit quellenbasierten Berichten",
+        "description": "Checkeapp prüft Aussagen gegen aktuelle Webquellen und liefert einen Bericht, in dem jede Aussage bis zu ihrer Quelle nachvollziehbar ist. Gebaut mit TypeScript, Next.js und React auf einer Retrieval-Augmented-Generation-Pipeline, mit 95 % Genauigkeit in der Evaluation.",
+        "highlights": [
+          "RAG-Pipeline, die aktuelle Webquellen heranzieht und nachvollziehbare, belegte Berichte erzeugt",
+          "95 % Genauigkeit in der Evaluation erreicht",
+          "Asynchroner mehrstufiger Ablauf: Fragengenerierung, Quellensuche, Validierung und Berichtserstellung",
+          "Umgesetzt im Rahmen der öffentlichen KI-Initiative ILENIA und ALIA mit der Universität des Baskenlandes"
+        ]
+      },
+      "ilias-survey": {
+        "tagline": "Technical Lead eines Kernmoduls des Open-Source-LMS ILIAS",
+        "description": "Survey ist eines der Kernmodule von ILIAS, dem Open-Source-Lernmanagementsystem, das Hochschulen in ganz Europa einsetzen. Ich verantworte seine technische Weiterentwicklung: Prioritäten setzen, Störungen bearbeiten, Anforderungen mit den nutzenden Institutionen abstimmen und die Änderungen ausliefern.",
+        "highlights": [
+          "Technische Verantwortung für das Modul: Roadmap, Priorisierung und Störungsbearbeitung",
+          "40 % des angesammelten Backlogs nach Übernahme des Moduls abgearbeitet",
+          "Anforderungen direkt mit den Kundeninstitutionen abgestimmt",
+          "PHP-Codebasis im ILIAS-Kern, ausgeliefert über den CI/CD-Prozess des Teams"
+        ]
+      },
+      "ilias-plugins": {
+        "tagline": "Funktionen, Fixes und Releases im ILIAS-Plugin-Ökosystem",
+        "description": "Laufende Arbeit an eigenen und Open-Source-Plugins für ILIAS — STACK für MINT-Prüfungen, AIChat für LLM-Konversationen innerhalb der Plattform, LiveVoting für Beteiligung in Echtzeit — inklusive des gesamten technischen Ticket-Lebenszyklus von der Kundenmeldung bis zum Release.",
+        "highlights": [
+          "Neue Funktionen, Verbesserungen und Störungsbehebung in eigenen und Open-Source-Plugins für ILIAS",
+          "Vollständiger technischer Ticket-Lebenszyklus, von der Kundenmeldung bis zum Release",
+          "Release-Management über GitHub Actions mit getrennten Entwicklungs-, Test- und Produktionsumgebungen"
+        ]
+      },
+      "qardrobe": {
+        "tagline": "EU-Digitaler Produktpass für Modemarken",
+        "description": "Eine Full-Stack-Plattform, die Modemarken bei der Einhaltung der EU-Verordnung zum Digitalen Produktpass unterstützt. Lebenszyklusdaten der Kleidungsstücke werden unveränderlich im Polygon-Netzwerk festgehalten, Supabase übernimmt Authentifizierung und Anwendungsdaten.",
+        "highlights": [
+          "Solidity-Smart-Contract auf Polygon, der Kleidungsdaten unveränderlich festhält",
+          "Frontend mit React und TypeScript, Supabase für Authentifizierung und Daten",
+          "Abschlussprojekt des höheren Fachabschlusses in Webanwendungsentwicklung"
+        ]
+      },
+      "color-ease": {
+        "tagline": "Farbpaletten-Generator mit Barrierefreiheitsprüfung",
+        "description": "Ein Werkzeug für Designerinnen und Entwickler, um Farbpaletten zu erstellen und sie vor dem Produktiveinsatz gegen die WCAG-Kontrastanforderungen zu prüfen.",
+        "highlights": [
+          "WCAG-AA/AAA-Kontrastprüfung in Echtzeit",
+          "Palettenerzeugung auf Basis farbtheoretischer Beziehungen",
+          "Umrechnung zwischen HEX, RGB und HSL"
+        ]
+      },
+      "todo-app": {
+        "tagline": "Aufgabenverwaltung mit Echtzeit-Synchronisierung",
+        "description": "Eine Aufgabenverwaltung auf Basis von Firebase, mit Authentifizierung und Echtzeit-Synchronisierung der Aufgaben über mehrere Geräte hinweg.",
+        "highlights": [
+          "Echtzeit-Synchronisierung über Cloud-Firestore-Listener",
+          "Authentifizierung per E-Mail und Passwort",
+          "Responsive Oberfläche mit React und TypeScript"
+        ]
+      },
+      "airport-manager": {
+        "tagline": "Desktop-Anwendung für den Flughafenbetrieb",
+        "description": "Eine Java-Desktop-Anwendung zur Verwaltung des Flughafenbetriebs — Flüge, Gates und Zeitpläne — mit Swing-Oberfläche auf einer MySQL-Datenbank über JDBC.",
+        "highlights": [
+          "Vollständiges CRUD auf einem normalisierten relationalen Schema",
+          "Swing-Desktop-Oberfläche mit Datenzugriff über JDBC",
+          "Studienprojekt mit Schwerpunkt auf relationaler Modellierung"
+        ]
+      },
+      "portfolio": {
+        "tagline": "Diese Website",
+        "description": "Gebaut mit React 18, TypeScript und Vite, vollständig über Design-Tokens von Tailwind CSS v4 gestaltet und ohne Komponentenbibliothek. Helles und dunkles Design, drei Sprachen und Animationen, die prefers-reduced-motion respektieren.",
+        "highlights": [
+          "Token-basiertes Designsystem mit Tailwind CSS v4, ohne Komponentenbibliothek",
+          "Vollständige Internationalisierung in Englisch, Spanisch und Deutsch mit i18next",
+          "Barrierefrei von Haus aus: Tastaturnavigation, sichtbarer Fokus und Reduced-Motion-Unterstützung"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Ich spreche gern über spannende Probleme. Am schnellsten erreichen Sie mich per E-Mail.",
+    "infoTitle": "Kontaktdaten",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "location": "Standort",
+    "elsewhere": "Anderswo",
+    "formTitle": "Nachricht senden",
+    "name": "Name",
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "sie@unternehmen.com",
+    "message": "Nachricht",
+    "messagePlaceholder": "Was möchten Sie bauen?",
+    "helper": "Ich antworte in der Regel innerhalb von ein bis zwei Tagen.",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet …",
+    "successTitle": "Nachricht gesendet",
+    "success": "Danke für Ihre Nachricht — ich melde mich in Kürze.",
+    "errorTitle": "Etwas ist schiefgelaufen",
+    "error": "Die Nachricht konnte nicht gesendet werden. Schreiben Sie mir gern direkt eine E-Mail.",
+    "sendAnother": "Weitere Nachricht senden"
+  },
+  "footer": {
+    "built": "Gestaltet und entwickelt von Abraham Morales",
+    "source": "Quellcode auf GitHub",
+    "rights": "Alle Rechte vorbehalten.",
+    "tagline": "DevOps und E-Learning-Systeme. Ich baue die Verbindungen zwischen LMS-Plattformen, RAG-Pipelines und der Infrastruktur darunter."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "desc": "Diese Route existiert nicht. Möglicherweise wurde sie verschoben oder der Link ist veraltet."
+  }
+}
