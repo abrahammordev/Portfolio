@@ -2,7 +2,7 @@
 
 Personal portfolio of **Abraham Morales Rodríguez**, software developer working on DevOps and e-learning systems in Seville, Spain.
 
-**Live:** [abrahammor.dev](https://abrahammor.dev) · [abrahammordev-portfolio.vercel.app](https://abrahammordev-portfolio.vercel.app/)
+**Live:** [abrahammordev-portfolio.vercel.app](https://abrahammordev-portfolio.vercel.app/)
 
 ---
 
