@@ -1,21 +1,36 @@
-import { Container, SimpleGrid, Box } from "@chakra-ui/react";
-import ContactForm from "../components/ContactComponents/ContactForm/ContactForm";
-import ContactInfo from "../components/ContactComponents/ContactInfo";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { Container } from "../components/ui/Section";
+import { ContactInfo } from "../components/contact/ContactInfo";
+import { ContactForm } from "../components/contact/ContactForm";
+import { fadeInUp, staggerContainer } from "../lib/animations";
 
-const Contact: React.FC = () => {
+export default function Contact() {
+  const { t } = useTranslation();
 
   return (
-    <Container maxW="container.lg" py={8} pb={{ base: "150px", md: "0" }}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Box>
-          <ContactInfo />
-        </Box>
-        <Box>
-          <ContactForm />
-        </Box>
-      </SimpleGrid>
-    </Container>
-  );
-};
+    <div className="pt-32 pb-20 sm:pt-40 sm:pb-28">
+      <Container>
+        <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="max-w-2xl">
+          <motion.p
+            variants={fadeInUp}
+            className="font-mono text-xs uppercase tracking-[0.18em] text-accent"
+          >
+            / contact
+          </motion.p>
+          <motion.h1 variants={fadeInUp} className="mt-4 text-4xl font-semibold sm:text-5xl">
+            {t("contact.title")}
+          </motion.h1>
+          <motion.p variants={fadeInUp} className="mt-4 text-base leading-relaxed text-muted">
+            {t("contact.subtitle")}
+          </motion.p>
+        </motion.div>
 
-export default Contact;
+        <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-12">
+          <ContactInfo />
+          <ContactForm />
+        </div>
+      </Container>
+    </div>
+  );
+}

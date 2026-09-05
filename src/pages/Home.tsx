@@ -1,14 +1,17 @@
-import { Box } from "@chakra-ui/react";
-import HeroSection from "../components/HomeComponents/HeroSection";
-import AcademicInfo from "../components/HomeComponents/AcademicInfo";
+import { Hero } from "../components/home/Hero";
+import { NowSection } from "../components/home/NowSection";
+import { FeaturedProjects } from "../components/home/FeaturedProjects";
+import { TechStack } from "../components/home/TechStack";
+import { ContactCTA } from "../components/home/ContactCTA";
 
-const Home = () => {
-    return (
-        <Box pb={{ base: "100px", md: "40px" }}>
-            <HeroSection />
-            <AcademicInfo />
-        </Box>
-    );
-};
-
-export default Home;
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <NowSection />
+      <FeaturedProjects />
+      <TechStack />
+      <ContactCTA />
+    </>
+  );
+}

@@ -1,14 +1,15 @@
-import { Box } from "@chakra-ui/react";
-import IntroSection from "../components/AboutComponents/Intro/IntroSection";
-import TimeLine from "../components/AboutComponents/TimeLine";
+import { Intro } from "../components/about/Intro";
+import { ExperienceTimeline } from "../components/about/ExperienceTimeline";
+import { TechStack } from "../components/home/TechStack";
+import { ContactCTA } from "../components/home/ContactCTA";
 
-const About: React.FC = () => {
+export default function About() {
   return (
-    <Box id="about" style={{ paddingBottom: "120px" }}>
-      <IntroSection />
-      <TimeLine />
-    </Box>
+    <>
+      <Intro />
+      <ExperienceTimeline />
+      <TechStack />
+      <ContactCTA />
+    </>
   );
-};
-
-export default About;
+}

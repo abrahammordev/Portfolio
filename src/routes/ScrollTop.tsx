@@ -1,14 +1,20 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const ScrollToTop = () => {
-    const { pathname } = useLocation();
+/** Resets scroll position on navigation, honouring in-page hash links. */
+export default function ScrollToTop() {
+  const { pathname, hash } = useLocation();
 
-    useEffect(() => {
-        window.scrollTo({top:0 ,behavior: 'smooth'});
-    }, [pathname]);
+  useEffect(() => {
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+  }, [pathname, hash]);
 
-    return null;
-};
-
-export default ScrollToTop;
+  return null;
+}

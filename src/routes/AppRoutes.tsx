@@ -1,34 +1,36 @@
-import React, { lazy, Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 import RoutePaths from "./RoutePaths";
 import ScrollToTop from "./ScrollTop";
-import { Center, Spinner } from "@chakra-ui/react"; 
 
 const Home = lazy(() => import("../pages/Home"));
 const About = lazy(() => import("../pages/About"));
+const Projects = lazy(() => import("../pages/Projects"));
 const Contact = lazy(() => import("../pages/Contact"));
-const Projects = lazy(() => import("../pages/Projects")); 
+const NotFound = lazy(() => import("../pages/NotFound"));
 
-const AppRoutes: React.FC = () => {
+function RouteFallback() {
+  return (
+    <div className="flex min-h-[70dvh] items-center justify-center" role="status" aria-live="polite">
+      <span className="size-7 animate-spin rounded-full border-2 border-border border-t-accent" />
+      <span className="sr-only">Loading</span>
+    </div>
+  );
+}
+
+export default function AppRoutes() {
   return (
     <>
       <ScrollToTop />
-      <Suspense 
-        fallback={
-          <Center h="100vh">
-            <Spinner size="xl" color="brand.500" thickness="4px" />
-          </Center>
-        }
-      >
+      <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path={RoutePaths.Home} element={<Home />} />
           <Route path={RoutePaths.About} element={<About />} />
-          <Route path={RoutePaths.Contact} element={<Contact />} />
           <Route path={RoutePaths.Projects} element={<Projects />} />
+          <Route path={RoutePaths.Contact} element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </>
   );
-};
-
-export default AppRoutes;
+}
