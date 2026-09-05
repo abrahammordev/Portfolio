@@ -1,98 +1,132 @@
+import type { IconType } from "react-icons";
 import {
-  FaPython,
-  FaJs,
+  FaAws,
   FaDocker,
   FaGitAlt,
-  FaAws,
-  FaPhp,
-  FaLinux,
   FaJava,
+  FaJs,
+  FaLinux,
+  FaPhp,
+  FaServer,
+  FaPython,
   FaReact,
 } from "react-icons/fa";
 import {
+  SiChakraui,
+  SiDjango,
+  SiDotnet,
+  SiExpress,
+  SiFramer,
+  SiGithubactions,
+  SiJest,
+  SiMongodb,
+  SiMoodle,
   SiMysql,
+  SiNextdotjs,
+  SiNginx,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPlesk,
+  SiPostman,
+  SiShadcnui,
+  SiSolidity,
+  SiSpring,
+  SiSupabase,
   SiTailwindcss,
   SiTypescript,
-  SiChakraui,
-  SiPostgresql,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPrisma,
-  SiSolana,
-  SiOpenai,
-  SiNginx,
-  SiDjango,
-  SiJest,
-  SiFirebase,
   SiVite,
-  SiSolidity,
-  SiGithubactions,
-  SiFigma,
-  SiPostman,
+  SiVitest,
 } from "react-icons/si";
 
 export interface Skill {
   name: string;
-  icon: React.ComponentType<{ size?: number | string; className?: string }>;
+  icon: IconType;
 }
 
-export const skills = {
-  languages: [
-    { name: "TypeScript", icon: SiTypescript },
-    { name: "JavaScript", icon: FaJs },
-    { name: "Python", icon: FaPython },
-    { name: "Java", icon: FaJava },
-    { name: "PHP", icon: FaPhp },
-    { name: "Solidity", icon: SiSolidity },
-  ],
+export interface SkillGroup {
+  id: string;
+  /** i18n key for the group label */
+  labelKey: string;
+  items: Skill[];
+}
 
-  frontend: [
-    { name: "React", icon: FaReact },
-    { name: "Next.js", icon: SiNextdotjs },
-    { name: "Vite", icon: SiVite },
-    { name: "Tailwind", icon: SiTailwindcss },
-    { name: "Chakra UI", icon: SiChakraui },
-  ],
-
-  backend: [
-    { name: "Node.js", icon: SiNodedotjs },
-    { name: "Django", icon: SiDjango },
-    { name: "Prisma", icon: SiPrisma },
-    { name: "PostgreSQL", icon: SiPostgresql },
-    { name: "MySQL", icon: SiMysql },
-    { name: "Firebase", icon: SiFirebase },
-  ],
-
-  testingAi: [
-    { name: "Jest", icon: SiJest },
-    { name: "OpenAI", icon: SiOpenai },
-    { name: "Solana", icon: SiSolana },
-  ],
-
-  devOps: [
-    { name: "Docker", icon: FaDocker },
-    { name: "Nginx", icon: SiNginx },
-    { name: "AWS", icon: FaAws },
-    { name: "GitHub Actions", icon: SiGithubactions },
-    { name: "Git", icon: FaGitAlt },
-    { name: "Linux", icon: FaLinux },
-  ],
-
-  tools: [
-    { name: "Figma", icon: SiFigma },
-    { name: "Postman", icon: SiPostman },
-  ],
-};
-
-export const skillCategories = [
-  { id: "languages", name: "Languages", items: skills.languages },
-  { id: "frontend", name: "Frontend", items: skills.frontend },
-  { id: "backend", name: "Backend", items: skills.backend },
-  { id: "testingAi", name: "Testing & AI", items: skills.testingAi },
-  { id: "devOps", name: "DevOps & Tools", items: skills.devOps },
-  { id: "tools", name: "Tools", items: skills.tools },
+export const skillGroups: SkillGroup[] = [
+  {
+    id: "devops",
+    labelKey: "skills.groups.devops",
+    items: [
+      { name: "Linux", icon: FaLinux },
+      { name: "Docker", icon: FaDocker },
+      { name: "Docker Compose", icon: FaDocker },
+      { name: "GitHub Actions", icon: SiGithubactions },
+      { name: "Nginx", icon: SiNginx },
+      { name: "Git", icon: FaGitAlt },
+      { name: "Coolify", icon: FaServer },
+      { name: "Plesk", icon: SiPlesk },
+      { name: "AWS", icon: FaAws },
+      { name: "AWS Bedrock", icon: FaAws },
+    ],
+  },
+  {
+    id: "lms",
+    labelKey: "skills.groups.lms",
+    items: [
+      { name: "Moodle", icon: SiMoodle },
+      { name: "ILIAS", icon: FaPhp },
+      { name: "PHP", icon: FaPhp },
+      { name: "Python", icon: FaPython },
+    ],
+  },
+  {
+    id: "frontend",
+    labelKey: "skills.groups.frontend",
+    items: [
+      { name: "React", icon: FaReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "JavaScript", icon: FaJs },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "shadcn/ui", icon: SiShadcnui },
+      { name: "Chakra UI", icon: SiChakraui },
+      { name: "Vite", icon: SiVite },
+      { name: "Framer Motion", icon: SiFramer },
+    ],
+  },
+  {
+    id: "backend",
+    labelKey: "skills.groups.backend",
+    items: [
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Express", icon: SiExpress },
+      { name: "Java / Spring", icon: SiSpring },
+      { name: "Java", icon: FaJava },
+      { name: "C# / .NET", icon: SiDotnet },
+      { name: "Django", icon: SiDjango },
+      { name: "Solidity", icon: SiSolidity },
+    ],
+  },
+  {
+    id: "data",
+    labelKey: "skills.groups.data",
+    items: [
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "MySQL", icon: SiMysql },
+      { name: "MongoDB", icon: SiMongodb },
+    ],
+  },
+  {
+    id: "testing",
+    labelKey: "skills.groups.testing",
+    items: [
+      { name: "Vitest", icon: SiVitest },
+      { name: "Jest", icon: SiJest },
+      { name: "Locust", icon: FaPython },
+      { name: "Postman", icon: SiPostman },
+    ],
+  },
 ];
 
-export const allSkills = Object.values(skills).flat();
+export const marqueeSkills = skillGroups.flatMap((g) => g.items);
 
-export default skills;
+export default skillGroups;
