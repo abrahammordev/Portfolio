@@ -31,12 +31,12 @@
       "E-learning Specialist",
       "ILIAS & Moodle plugin developer"
     ],
-    "lead": "Full-stack developer with production experience in CI/CD pipeline design, containerised deployments and microservices architecture. I led the technical integration of a RAG system with Moodle, and I'm technical lead of a core module of the open-source LMS ILIAS.",
+    "lead": "Full-stack developer with production experience in CI/CD pipeline design, containerised deployments and microservices architecture. I led the technical integration of a RAG system with Moodle, and I'm the technical lead for a core module of the open-source LMS ILIAS.",
     "currentlyAt": "Currently at"
   },
   "stats": {
     "backlog": "of the Survey module backlog resolved after taking it over",
-    "accuracy": "accuracy on Checkeapp's source-backed verification reports",
+    "accuracy": "accuracy in Checkeapp's source-backed fact-checking reports",
     "environments": "reduction in reported incidents after creating a release protocol",
     "lms": "LMS ecosystems in production: ILIAS and Moodle"
   },
@@ -49,7 +49,7 @@
     },
     "rag": {
       "title": "RAG inside the LMS",
-      "desc": "SURContext started in ILIAS and now runs in both ecosystems. I own the Moodle side: the plugins that feed course content into the retrieval pipeline without manual steps."
+      "desc": "SURContext started in ILIAS and now runs across both LMS ecosystems. I own the Moodle side: the plugins that feed course content into the retrieval pipeline without manual intervention."
     },
     "release": {
       "title": "Release engineering",
@@ -101,15 +101,15 @@
       "role": "Full Stack Developer",
       "period": "2025",
       "summary": "Product work on AI platforms and internal tooling, end to end.",
-      "b1": "Built Checkeapp (TypeScript, Next.js, React), a real-time fact-checking platform using Retrieval-Augmented Generation to pull live web sources and generate verifiable, reference-backed reports, reaching 95% accuracy. Delivered under ILENIA & ALIA, the Spanish government's public AI initiative, in collaboration with the University of the Basque Country.",
-      "b2": "Built an internal business-management platform with Express and RESTful APIs, integrating PostgreSQL for data management. The platform focused on service integration and process automation, improving time spent managing tasks by 30%."
+      "b1": "Built Checkeapp (TypeScript, Next.js, React), a real-time fact-checking platform using Retrieval-Augmented Generation to retrieve live web sources and generate verifiable, reference-backed reports, reaching 95% accuracy. Delivered under ILENIA & ALIA, the Spanish government's public AI initiative, in collaboration with the University of the Basque Country.",
+      "b2": "Built an internal business-management platform with Express and RESTful APIs, integrating PostgreSQL for data management. The platform focused on service integration and process automation, reducing the time spent managing tasks by 30%."
     },
     "opoflash": {
       "role": "Founder & Developer — OpoFlash",
       "period": "Jun 2024 — Present",
       "summary": "A personal product: adaptive study platform for Spanish civil-service exams.",
       "b1": "Designed and built a microservices-based e-learning system integrated with a custom RAG system that analyses student-uploaded content and automatically generates contextualised flashcards and summaries.",
-      "b2": "Implemented a spaced-repetition engine in Python (FSRS-5) that adapts review intervals to each student's performance, optimising long-term retention against the forgetting curve."
+      "b2": "Implemented a spaced-repetition engine in Python (FSRS-5) that adapts review intervals to each student's performance, optimising long-term retention while accounting for the forgetting curve."
     }
   },
   "education": {
@@ -217,7 +217,7 @@
       },
       "color-ease": {
         "tagline": "Colour palette generator with accessibility checks",
-        "description": "A tool for designers and developers to build colour palettes and check them against WCAG contrast requirements before they reach production.",
+          "description": "A tool for designers and developers to build colour palettes and check them against WCAG contrast requirements before they are used in production.",
         "highlights": [
           "Real-time WCAG AA/AAA contrast checking",
           "Palette generation based on colour-theory relationships",

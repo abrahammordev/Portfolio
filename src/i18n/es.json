@@ -16,10 +16,10 @@
     "getInTouch": "Hablemos",
     "readMore": "Detalles",
     "close": "Cerrar",
-    "liveSite": "Ver en vivo",
+    "liveSite": "Visitar el sitio",
     "sourceCode": "Código fuente",
     "loading": "Cargando",
-    "available": "Disponible para conectar",
+    "available": "Abierto a nuevos proyectos",
     "backHome": "Volver al inicio"
   },
   "hero": {
@@ -31,7 +31,7 @@
       "Especialista en e-learning",
       "Desarrollo de plugins ILIAS y Moodle"
     ],
-    "lead": "Desarrollador full-stack con experiencia en entornos de producción, diseño de pipelines CI/CD, despliegues en contenedores y arquitectura de microservicios. He liderado la integración técnica de un sistema RAG con Moodle y soy technical lead de un módulo core del LMS open source ILIAS.",
+    "lead": "Desarrollador full-stack con experiencia en entornos de producción, diseño de pipelines CI/CD, despliegues en contenedores y arquitectura de microservicios. He liderado la integración técnica de un sistema RAG con Moodle y soy responsable técnico de un módulo del Core de ILIAS.",
     "currentlyAt": "Actualmente en"
   },
   "stats": {
@@ -41,7 +41,7 @@
     "lms": "ecosistemas LMS en producción: ILIAS y Moodle"
   },
   "now": {
-    "title": "En lo que trabajo ahora",
+    "title": "En qué estoy trabajando ahora",
     "subtitle": "Las cinco cosas que ocupan la mayor parte de mi semana.",
     "survey": {
       "title": "Technical lead — Survey para ILIAS",
@@ -49,18 +49,18 @@
     },
     "rag": {
       "title": "RAG dentro del LMS",
-      "desc": "SURContext nació en ILIAS y hoy corre en los dos ecosistemas. Yo llevo la parte de Moodle: los plugins que llevan el contenido de los cursos al pipeline de recuperación sin pasos manuales."
+      "desc": "SURContext nació en ILIAS y hoy funciona en ambos ecosistemas LMS. Yo lidero la parte de Moodle: los plugins que alimentan el pipeline de recuperación con el contenido de los cursos sin intervención manual."
     },
     "release": {
-      "title": "Ingeniería de releases",
+      "title": "Release Engineering",
       "desc": "Un protocolo de control de versiones y publicación sobre GitHub Actions, con entornos separados de desarrollo, pruebas y producción."
     },
     "load": {
-      "title": "Pruebas de carga sobre RAG",
-      "desc": "Auditando capacidad y concurrencia con Locust y traduciendo los resultados en decisiones de infraestructura para cada cliente."
+      "title": "Test de carga sobre RAG",
+      "desc": "Audito la capacidad y la concurrencia con Locust y traduzco los resultados en decisiones de infraestructura para cada cliente."
     },
     "opoflash": {
-      "title": "Construyendo OpoFlash",
+      "title": "Desarrollo de OpoFlash",
       "desc": "Una plataforma de estudio adaptativa que genera flashcards a partir del material del propio alumno y programa los repasos con un motor FSRS-5."
     }
   },
@@ -80,7 +80,7 @@
     "title": "Sobre mí",
     "kicker": "Desarrollador de software · DevOps y sistemas e-learning",
     "p1": "Soy desarrollador de software y vivo en Sevilla. Trabajo en Surlabs, donde mi semana se reparte entre DevOps —Docker, servidores Linux, pipelines CI/CD— y sistemas e-learning construidos sobre Moodle e ILIAS.",
-    "p2": "Casi todo lo que hago vive en la costura entre dos sistemas: conectar un pipeline RAG con un LMS, montar un proceso de releases sobre tres entornos, conseguir que un módulo PHP dentro de un código open source con muchos años de historia se comporte de forma predecible. Esa es la parte que me gusta.",
+    "p2": "Casi todo lo que hago se sitúa en la intersección entre dos sistemas: conectar un pipeline RAG con un LMS, montar un proceso de releases sobre tres entornos, conseguir que un módulo PHP dentro de un código abierto de larga trayectoria se comporte de forma predecible. Esa es la parte que me gusta.",
     "p3": "Al margen de eso desarrollo OpoFlash, una plataforma de estudio adaptativa que convierte el material del propio alumno en flashcards y programa cada repaso con un motor de repetición espaciada FSRS-5.",
     "experienceTitle": "Experiencia",
     "educationTitle": "Formación",
@@ -100,16 +100,16 @@
     "surlabsDev": {
       "role": "Desarrollador full stack",
       "period": "2025",
-      "summary": "Producto sobre plataformas de IA y herramientas internas, de principio a fin.",
-      "b1": "Desarrollé Checkeapp (TypeScript, Next.js, React), una plataforma de verificación en tiempo real que usa Retrieval-Augmented Generation para consultar fuentes web en vivo y generar informes verificables con referencias, alcanzando un 95% de precisión. Entregado bajo ILENIA y ALIA, la iniciativa pública de IA del Gobierno de España, en colaboración con la Universidad del País Vasco.",
-      "b2": "Construí una plataforma interna de gestión empresarial con Express y APIs REST, integrando PostgreSQL para la gestión de datos. La plataforma se centró en la integración de servicios y la automatización de procesos, mejorando en un 30% el tiempo dedicado a gestionar tareas."
+      "summary": "Desarrollo de plataformas de IA y herramientas internas, de principio a fin.",
+      "b1": "Desarrollé Checkeapp (TypeScript, Next.js, React), una plataforma de verificación en tiempo real que usa Retrieval-Augmented Generation para consultar fuentes web en vivo y generar informes verificables con referencias, alcanzando un 95% de precisión. El proyecto se desarrolló en el marco de ILENIA y ALIA, la iniciativa pública de IA del Gobierno de España, en colaboración con la Universidad del País Vasco.",
+      "b2": "Construí una plataforma interna de gestión empresarial con Express y APIs REST, integrando PostgreSQL para la gestión de datos. La plataforma se centró en la integración de servicios y la automatización de procesos, reduciendo en un 30% el tiempo dedicado a gestionar tareas."
     },
     "opoflash": {
       "role": "Fundador y desarrollador — OpoFlash",
       "period": "Jun 2024 — Actualidad",
       "summary": "Producto propio: plataforma de estudio adaptativo para oposiciones.",
       "b1": "Diseñé y construí un sistema e-learning basado en microservicios integrado con un sistema RAG propio que analiza el contenido subido por el alumno y genera automáticamente flashcards y resúmenes contextualizados.",
-      "b2": "Implementé un motor de repetición espaciada en Python (FSRS-5) que adapta los intervalos de repaso al rendimiento de cada alumno, optimizando la retención a largo plazo frente a la curva del olvido."
+      "b2": "Implementé un motor de repetición espaciada en Python (FSRS-5) que adapta los intervalos de repaso al rendimiento de cada alumno, optimizando la retención a largo plazo teniendo en cuenta la curva del olvido."
     }
   },
   "education": {
@@ -168,12 +168,12 @@
       },
       "surcontext": {
         "tagline": "Plataforma RAG para los LMS ILIAS y Moodle",
-        "description": "SURContext es la plataforma de Retrieval-Augmented Generation de Surlabs. Nació dentro de ILIAS y hoy da servicio a los dos ecosistemas LMS: el material del curso se ingiere, se trocea y se indexa en una base vectorial, y un pipeline de agentes responde a alumnos y profesores a partir de ese material en lugar de lo que el modelo ya sabía. Lideré la parte de Moodle de principio a fin —los plugins que conectan el LMS directamente con el pipeline— y audité el sistema bajo carga.",
+      "description": "SURContext es la plataforma de Retrieval-Augmented Generation de Surlabs. Nació dentro de ILIAS y hoy da servicio a ambos ecosistemas LMS: el material del curso se ingiere, se trocea y se indexa en una base vectorial, y un pipeline de agentes responde a alumnos y profesores a partir de ese material en lugar de basarse en el conocimiento previo del modelo. Lideré la parte de Moodle de principio a fin —los plugins que conectan el LMS directamente con el pipeline— y audité el sistema bajo carga.",
         "highlights": [
-          "Pipeline de agentes sobre LangChain y LangGraph, con proveedores de modelo intercambiables entre OpenAI, Anthropic, Mistral y Ollama autoalojado",
-          "Ingesta documental con Unstructured y PyMuPDF —PDF, formatos Office y escaneos con OCR— y embeddings servidos por sentence-transformers",
+          "Pipeline de agentes sobre LangChain y LangGraph, con proveedores de modelos intercambiables entre OpenAI, Anthropic, Mistral y Ollama autoalojado",
+          "Ingesta documental con Unstructured y PyMuPDF —PDF, formatos Office y escaneos con OCR— y embeddings generados mediante sentence-transformers",
           "Búsqueda vectorial sobre Milvus y Qdrant; estado de conversación y checkpoints del grafo persistidos en MongoDB",
-          "Servicio FastAPI con Celery y Redis para los trabajos largos de ingesta e indexado",
+          "Servicio FastAPI con Celery y Redis para las tareas de larga duración de ingesta e indexado",
           "Nació en ILIAS; lideré la integración técnica con Moodle de principio a fin y medí los límites de capacidad y concurrencia con Locust"
         ]
       },
@@ -188,20 +188,20 @@
         ]
       },
       "ilias-survey": {
-        "tagline": "Technical lead de un módulo core del LMS open source ILIAS",
-        "description": "Survey es uno de los módulos core de ILIAS, el LMS open source que usan universidades de toda Europa. Soy responsable de su evolución técnica: definir prioridades, gestionar incidencias, coordinar requisitos con las instituciones que lo utilizan y entregar los cambios.",
+        "tagline": "Responsable técnico de un módulo central del LMS de código abierto ILIAS",
+        "description": "Survey es uno de los módulos centrales de ILIAS, el LMS de código abierto que utilizan universidades de toda Europa. Soy responsable de su evolución técnica: definir prioridades, gestionar incidencias, coordinar requisitos con las instituciones que lo utilizan y publicar los cambios.",
         "highlights": [
           "Responsabilidad técnica del módulo: hoja de ruta, prioridades y gestión de incidencias",
           "40% del backlog acumulado resuelto tras asumir el módulo",
-          "Requisitos coordinados directamente con las instituciones cliente",
+          "Requisitos coordinados directamente con las instituciones usuarias",
           "Código PHP dentro del core de ILIAS, publicado mediante el flujo CI/CD del equipo"
         ]
       },
       "ilias-plugins": {
         "tagline": "Funcionalidades, correcciones y releases en el ecosistema de plugins de ILIAS",
-        "description": "Trabajo continuo sobre plugins propios y open source para ILIAS —STACK para evaluación STEM, AIChat para conversaciones con LLM dentro de la plataforma, LiveVoting para participación en tiempo real— cubriendo el ciclo de vida completo del ticket técnico, del reporte del cliente a la release.",
+        "description": "Trabajo continuo sobre plugins propios y de código abierto para ILIAS —STACK para evaluación STEM, AIChat para conversaciones con LLM dentro de la plataforma, LiveVoting para participación en tiempo real— cubriendo el ciclo de vida completo del ticket técnico, desde el reporte del cliente hasta la publicación.",
         "highlights": [
-          "Nuevas funcionalidades, mejoras y corrección de incidencias en plugins propios y open source de ILIAS",
+          "Nuevas funcionalidades, mejoras y corrección de incidencias en plugins propios y de código abierto de ILIAS",
           "Ciclo de vida técnico completo del ticket, del reporte del cliente hasta la publicación",
           "Gestión de releases con GitHub Actions y entornos separados de desarrollo, pruebas y producción"
         ]
@@ -255,7 +255,7 @@
   },
   "contact": {
     "title": "Hablemos",
-    "subtitle": "Siempre dispuesto a hablar de problemas interesantes. La vía más rápida es el correo.",
+      "subtitle": "Siempre dispuesto a hablar de problemas interesantes. La forma más rápida de contactarme es por email.",
     "infoTitle": "Datos de contacto",
     "email": "Email",
     "phone": "Teléfono",
@@ -271,14 +271,14 @@
     "send": "Enviar mensaje",
     "sending": "Enviando…",
     "successTitle": "Mensaje enviado",
-    "success": "Gracias por escribir, te respondo lo antes posible.",
+      "success": "Gracias por escribir. Te responderé lo antes posible.",
     "errorTitle": "Algo ha fallado",
     "error": "No se ha podido enviar el mensaje. Puedes escribirme directamente por correo.",
     "sendAnother": "Enviar otro mensaje"
   },
   "footer": {
     "built": "Diseñado y desarrollado por Abraham Morales",
-    "source": "Código en GitHub",
+    "source": "Código fuente en GitHub",
     "rights": "Todos los derechos reservados.",
     "tagline": "DevOps y sistemas e-learning. Construyendo las conexiones entre plataformas LMS, pipelines RAG y la infraestructura que hay debajo."
   },
